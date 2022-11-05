@@ -68,11 +68,31 @@ var namespaces_dup =
     [ "anonymous_namespace{clzones.cpp}", "namespaceanonymous__namespace_02clzones_8cpp_03.html", [
       [ "zone_type_factory", "namespaceanonymous__namespace_02clzones_8cpp_03.html#a406c1737dfc42cacbea5c69e6fa78a15", null ]
     ] ],
+    [ "anonymous_namespace{construction.cpp}", "namespaceanonymous__namespace_02construction_8cpp_03.html", [
+      [ "all_constructions", "namespaceanonymous__namespace_02construction_8cpp_03.html#a5da2e229b1546f7772edc48fa79116e6", null ],
+      [ "constructions_sorted", "namespaceanonymous__namespace_02construction_8cpp_03.html#ad6f88bc31464db11fe2f957ce8abfe3d", null ]
+    ] ],
     [ "anonymous_namespace{construction_category.cpp}", "namespaceanonymous__namespace_02construction__category_8cpp_03.html", [
       [ "all_construction_categories", "namespaceanonymous__namespace_02construction__category_8cpp_03.html#a62dfe7e8a222a935c47fbe43044973b1", null ]
     ] ],
+    [ "anonymous_namespace{construction_group.cpp}", "namespaceanonymous__namespace_02construction__group_8cpp_03.html", [
+      [ "all_construction_groups", "namespaceanonymous__namespace_02construction__group_8cpp_03.html#a1abe9358fbbbb232d9e3a1d6b06d8ca8", null ]
+    ] ],
+    [ "anonymous_namespace{construction_sequence.cpp}", "namespaceanonymous__namespace_02construction__sequence_8cpp_03.html", [
+      [ "all_sequences", "namespaceanonymous__namespace_02construction__sequence_8cpp_03.html#ad2faffcffdd5b5e821cd1b7deeeea75a", null ],
+      [ "sequences_for_furn", "namespaceanonymous__namespace_02construction__sequence_8cpp_03.html#aeb9da88db26bdb23b47113689c9d7193", null ],
+      [ "sequences_for_ter", "namespaceanonymous__namespace_02construction__sequence_8cpp_03.html#ae49fae693fc8c1c1f9a279f9482d202d", null ]
+    ] ],
     [ "anonymous_namespace{debug.cpp}", "namespaceanonymous__namespace_02debug_8cpp_03.html", [
       [ "ignored_messages", "namespaceanonymous__namespace_02debug_8cpp_03.html#aac5ec8bb66a16096a2fd9ae0e87fcdf6", null ]
+    ] ],
+    [ "anonymous_namespace{diary_ui.cpp}", "namespaceanonymous__namespace_02diary__ui_8cpp_03.html", [
+      [ "draw_diary_border", "namespaceanonymous__namespace_02diary__ui_8cpp_03.html#a3598f2825ba29afbf6095658102fad6a", null ],
+      [ "print_list_scrollable", "namespaceanonymous__namespace_02diary__ui_8cpp_03.html#aa17d599fa720185e7f8e114bb5d956a6", null ],
+      [ "print_list_scrollable", "namespaceanonymous__namespace_02diary__ui_8cpp_03.html#a6f54bfdce622c97184f917f36e4887cc", null ],
+      [ "print_list_scrollable", "namespaceanonymous__namespace_02diary__ui_8cpp_03.html#a1b180c4ee1a5c9686d1b8550352aeb13", null ],
+      [ "print_list_scrollable", "namespaceanonymous__namespace_02diary__ui_8cpp_03.html#a1ff440bd0de20275e0a526e10e2e7c1f", null ],
+      [ "MAX_DAIRY_UI_WIDTH", "namespaceanonymous__namespace_02diary__ui_8cpp_03.html#a89704e9a29605ed7a423f422907ee24e", null ]
     ] ],
     [ "anonymous_namespace{disease.cpp}", "namespaceanonymous__namespace_02disease_8cpp_03.html", [
       [ "disease_factory", "namespaceanonymous__namespace_02disease_8cpp_03.html#a75cb92ba312ed17a7aa44cdadee9f354", null ]
@@ -342,7 +362,7 @@ var namespaces_dup =
       [ "check_empty", "namespaceconstruct.html#a5c7bfa81b1b783dbe606e8e1ae270cb2", null ],
       [ "check_empty_up_OK", "namespaceconstruct.html#a8e2634d318be5dc50bdb38f4b30f726f", null ],
       [ "check_no_trap", "namespaceconstruct.html#a067fa17ebfe14fea8e561056651e010f", null ],
-      [ "check_nothing", "namespaceconstruct.html#a993b2191890a54b54730c413070ea577", null ],
+      [ "check_nothing", "namespaceconstruct.html#ac4566ee40eb51023fc15b0f21a120524", null ],
       [ "check_ramp_high", "namespaceconstruct.html#a6b8cdaae5a7bd8bcae16e4670b729896", null ],
       [ "check_ramp_low", "namespaceconstruct.html#aeb00f0d89830aff9fd97f91ada1300b3", null ],
       [ "check_support", "namespaceconstruct.html#adf73ee06612e17a7462faf763b99340b", null ],
@@ -371,6 +391,30 @@ var namespaces_dup =
       [ "load", "namespaceconstruction__categories.html#a7f83111651080465e41ffe8d71b044b8", null ],
       [ "reset", "namespaceconstruction__categories.html#a626e729f7a1ffbe907bab878ccb61a2d", null ]
     ] ],
+    [ "construction_groups", "namespaceconstruction__groups.html", [
+      [ "get_all", "namespaceconstruction__groups.html#aa39b5e6512ad85bc06a16c92d758cc2a", null ],
+      [ "load", "namespaceconstruction__groups.html#aa2c993aeb54fad42759995256dc506f4", null ],
+      [ "reset", "namespaceconstruction__groups.html#a818b6b3bcdd82c5a18a7866adca57ee3", null ]
+    ] ],
+    [ "construction_sequences", "namespaceconstruction__sequences.html", [
+      [ "check_consistency", "namespaceconstruction__sequences.html#ae3dd77cfb59719ab0ce5f04905eb40c1", null ],
+      [ "finalize", "namespaceconstruction__sequences.html#a9d09cc131d46de4a5c993f90dd9407b7", null ],
+      [ "has_valid_category", "namespaceconstruction__sequences.html#abe055de70abaec3f4870b1bbdc0eaf2a", null ],
+      [ "has_valid_result", "namespaceconstruction__sequences.html#ab87dcf409cee13a4410f85cf2e92bfb7", null ],
+      [ "is_valid_first_step", "namespaceconstruction__sequences.html#a63bbedcb693b9cd0f74a7fc5e6b5b864", null ],
+      [ "load", "namespaceconstruction__sequences.html#a931e4647d20ea9a3f0f2f1a3368a87b7", null ],
+      [ "lookup_sequence", "namespaceconstruction__sequences.html#aaaf5d2418465c08d386c8f81c6fe041f", null ],
+      [ "lookup_sequence", "namespaceconstruction__sequences.html#aaea5fc5d3181e2de94c3f0907a6504d9", null ],
+      [ "reset", "namespaceconstruction__sequences.html#abf7e7f9130e3548ede8580c0e8ceb01e", null ]
+    ] ],
+    [ "constructions", "namespaceconstructions.html", [
+      [ "check_consistency", "namespaceconstructions.html#a012e345f9cc8d1b1caaeee08acbea958", null ],
+      [ "finalize", "namespaceconstructions.html#aff7bc057c801d3b2deef09e83cf3e7d7", null ],
+      [ "get_all_sorted", "namespaceconstructions.html#ac95b3bf969c90f634ef207f68584fda3", null ],
+      [ "load", "namespaceconstructions.html#acd2f385d7fcf3afb87b0407e1c8bfb91", null ],
+      [ "override_build_times", "namespaceconstructions.html#a13ebf7d49064b926b2911dadef16bf03", null ],
+      [ "reset", "namespaceconstructions.html#a5dd444bbaaedcd39c8e8208e6b646378", null ]
+    ] ],
     [ "coords", "namespacecoords.html", "namespacecoords" ],
     [ "crafting", "namespacecrafting.html", [
       [ "can_disassemble", "namespacecrafting.html#a33e973ebbe76aa946752c7f3b4a4392d", null ],
@@ -394,6 +438,7 @@ var namespaces_dup =
       [ "complex_conds", "namespacedialogue__data.html#a26e681c79153a7820fdeaa96e9223aa3", null ],
       [ "simple_string_conds", "namespacedialogue__data.html#a6fed24978753ef5c62bb51fd50f30071", null ]
     ] ],
+    [ "distraction_manager", "namespacedistraction__manager.html", "namespacedistraction__manager" ],
     [ "distribution_graph", "namespacedistribution__graph.html", "namespacedistribution__graph" ],
     [ "doors", "namespacedoors.html", [
       [ "close_door", "namespacedoors.html#acc8efe27aeed04f754930b76a29d0c2a", null ]
@@ -537,9 +582,9 @@ var namespaces_dup =
     [ "gates", "namespacegates.html", [
       [ "check", "namespacegates.html#a3ef5351e05e4b2d492562205261db96c", null ],
       [ "load", "namespacegates.html#a0eeda5c9b391c2d30f63a1dad75b043b", null ],
-      [ "open_gate", "namespacegates.html#ae998ffa52a73418a8a0801c102648f75", null ],
-      [ "open_gate", "namespacegates.html#a21a6ac9535199473360da4ccbda76f22", null ],
-      [ "reset", "namespacegates.html#ac8730a42296c6b07c8effd83106ddb08", null ]
+      [ "reset", "namespacegates.html#ac8730a42296c6b07c8effd83106ddb08", null ],
+      [ "toggle_gate", "namespacegates.html#ac6c523200a835b37be9b28bf9fc539b2", null ],
+      [ "toggle_gate", "namespacegates.html#a84015d35b252bacce5c6ee9ae9f6fde2", null ]
     ] ],
     [ "iexamine", "namespaceiexamine.html", [
       [ "aggie_plant", "namespaceiexamine.html#a01429a76cc9d3d1563fb501ae6a1dd3a", null ],
@@ -605,6 +650,7 @@ var namespaces_dup =
       [ "ledge", "namespaceiexamine.html#af44785c44ed5b238072e392c7805a6fe", null ],
       [ "locked_object", "namespaceiexamine.html#ade298007b9644bd1dd31a165c84c273f", null ],
       [ "locked_object_pickable", "namespaceiexamine.html#a06c1947e94ea34ddc4aee4f584c5fc8b", null ],
+      [ "migo_nerve_cluster", "namespaceiexamine.html#a5e019567c1f8ce2c1f580160ea21185c", null ],
       [ "mill_finalize", "namespaceiexamine.html#a639d89c065849a9b4c19a27ac234ce2d", null ],
       [ "nanofab", "namespaceiexamine.html#a04569e7ba85955feff7bf4488d81d0f1", null ],
       [ "none", "namespaceiexamine.html#a45c131e909371e96743dfe0a21ba75a6", null ],
@@ -880,7 +926,8 @@ var namespaces_dup =
       [ "perform_liquid_transfer", "namespaceliquid__handler.html#a8c1765bcc2eb292f1a8cc24f0ca2b8b9", null ]
     ] ],
     [ "map_funcs", "namespacemap__funcs.html", [
-      [ "climbing_cost", "namespacemap__funcs.html#a3d04b9be6f6d41f70f82070ae568e7b2", null ]
+      [ "climbing_cost", "namespacemap__funcs.html#a3d04b9be6f6d41f70f82070ae568e7b2", null ],
+      [ "migo_nerve_cage_removal", "namespacemap__funcs.html#a60f9a4c25252a0b8cffa456f6bc25887", null ]
     ] ],
     [ "MAP_SHARING", "namespaceMAP__SHARING.html", [
       [ "addAdmin", "namespaceMAP__SHARING.html#a77a25d8b951390c8f157e594e1e2993c", null ],
@@ -1156,6 +1203,7 @@ var namespaces_dup =
     ] ],
     [ "mod_management", "namespacemod__management.html", [
       [ "t_mod_list", "namespacemod__management.html#a2b453b753864424a211ee499133505ed", null ],
+      [ "get_default_core_content_pack", "namespacemod__management.html#a822d52deafd2d501f0afbd604ccafdd8", null ],
       [ "load_mod_info", "namespacemod__management.html#a5041a8497495347e6999ac3e88261cf5", null ],
       [ "load_mod_list", "namespacemod__management.html#a2327609c6925917f9a52fb4a54a0a661", null ],
       [ "load_modfile", "namespacemod__management.html#a19b5c0c2b1726de2895bb31d75953a75", null ],
@@ -1164,8 +1212,10 @@ var namespaces_dup =
     ] ],
     [ "monexamine", "namespacemonexamine.html", [
       [ "add_armor", "namespacemonexamine.html#aae7a3811b8d378a0968e67504f671bdf", null ],
+      [ "add_leash", "namespacemonexamine.html#ac213a1f089bcc2602a6c6c9d58d1d7b4", null ],
       [ "attach_bag_to", "namespacemonexamine.html#a935d4c4eb310af58bb939713d5cd22c9", null ],
       [ "attach_or_remove_saddle", "namespacemonexamine.html#a4396430d7db63915584d98c8180ea646", null ],
+      [ "deactivate_pet", "namespacemonexamine.html#ad401ef970ed982d7b51fe916e02429b7", null ],
       [ "dump_items", "namespacemonexamine.html#a684505599f42f0f8c335365a2e0cd73c", null ],
       [ "give_items_to", "namespacemonexamine.html#a89f3eb85572610e64aa683902e43687e", null ],
       [ "insert_battery", "namespacemonexamine.html#ab136709e2d3d094e1935f557142f1f75", null ],
@@ -1182,10 +1232,14 @@ var namespaces_dup =
       [ "remove_bag_from", "namespacemonexamine.html#a2f302aad60309cfa27768eaa40a1b40d", null ],
       [ "remove_battery", "namespacemonexamine.html#ae632756df3737235336f084961b8df6c", null ],
       [ "remove_harness", "namespacemonexamine.html#aec6fc547baa6fbcade434b0c8b38c905", null ],
+      [ "remove_leash", "namespacemonexamine.html#aa21165a63662ca525d1d9eea0a5b0d74", null ],
       [ "rename_pet", "namespacemonexamine.html#ae3ae4dbba4b470de0cb54e316337d6fb", null ],
       [ "shear_animal", "namespacemonexamine.html#af7c79c1c022f82da8a1cedeceb969aeb", null ],
+      [ "start_leading", "namespacemonexamine.html#a1c203b2eee53d0bcd927c4271e410c87", null ],
+      [ "stop_leading", "namespacemonexamine.html#a663586e54746514203b84f302e5b7faf", null ],
       [ "swap", "namespacemonexamine.html#af4ee634a5921005409a5f3aa79e4a8a3", null ],
-      [ "tie_or_untie", "namespacemonexamine.html#a48eed9a72d82e4a9258fbfbe7996aaf1", null ]
+      [ "tie_pet", "namespacemonexamine.html#ae76b120af015a9112d4ae33380b28164", null ],
+      [ "untie_pet", "namespacemonexamine.html#a3500f4f80a6dc864dac50a5af744be0a", null ]
     ] ],
     [ "monfactions", "namespacemonfactions.html", [
       [ "finalize", "namespacemonfactions.html#a420bb089e53354a988195b3f136347ec", null ],
@@ -1337,6 +1391,7 @@ var namespaces_dup =
       [ "defaultsounddir", "namespacePATH__INFO.html#ab1b96ecc4661a605f4a04c4388e9fd41", null ],
       [ "defaulttilejson", "namespacePATH__INFO.html#ae4c0906500b222227e00bc34cc94252f", null ],
       [ "defaulttilepng", "namespacePATH__INFO.html#a0773f1e01a9fb190c2f1e385ad2892b1", null ],
+      [ "distraction", "namespacePATH__INFO.html#a48b13e0e7d09a341face3e7408cbc8c9", null ],
       [ "fontconfig", "namespacePATH__INFO.html#a80886f68f9d0351e3e43b93063337844", null ],
       [ "fontdir", "namespacePATH__INFO.html#a55c9560f392f8f4a0cd0dc03125978d8", null ],
       [ "gfxdir", "namespacePATH__INFO.html#a089dac91cab1329892ec2ccea9d897dd", null ],
@@ -1542,7 +1597,7 @@ var namespaces_dup =
       [ "bash", "namespacespell__effect.html#a5190e06459a4d2190d8d029a4fba6d09", null ],
       [ "charm_monster", "namespacespell__effect.html#a23cac54dff54c06895ee6a486bdd91e8", null ],
       [ "cone_attack", "namespacespell__effect.html#a1046d781ac5cfb3381c95ce1d965f06b", null ],
-      [ "explosion", "namespacespell__effect.html#a7c2f005c1d34aeb869b6d6ffc5dacc5a", null ],
+      [ "explosion", "namespacespell__effect.html#a9f1b39574600d0523b1c049f7d7d69bd", null ],
       [ "flashbang", "namespacespell__effect.html#a025c386d19f6366b440c998b9d35a6af", null ],
       [ "line_attack", "namespacespell__effect.html#a60706ce2352423a49ebd4d43dacbd12f", null ],
       [ "map_area", "namespacespell__effect.html#a572acfb9ae05c3cdd9f2827512a7a2d4", null ],
@@ -1780,7 +1835,7 @@ var namespaces_dup =
     ] ],
     [ "ui", "namespaceui.html", "namespaceui" ],
     [ "ui_manager", "namespaceui__manager.html", [
-      [ "invalidate", "namespaceui__manager.html#ad37246d94ab9b88c0730eb02ba60643b", null ],
+      [ "invalidate", "namespaceui__manager.html#a93b4bb0f95c5d3a9be3b28ba09878fcc", null ],
       [ "redraw", "namespaceui__manager.html#ae38f3a918052ef286ee60daac47f52d4", null ],
       [ "redraw_invalidated", "namespaceui__manager.html#a5496220e43b7d5f1b3cbbebe6cf1f83d", null ],
       [ "screen_resized", "namespaceui__manager.html#aaa801bfcb6ef4eb737e70c793df08da9", null ]
