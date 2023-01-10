@@ -35,7 +35,7 @@ var searchData=
   ['has_5ffume_32',['has_fume',['../structfield__type.html#a945df8e3828398e06dddfe503b742df5',1,'field_type']]],
   ['has_5fgeneric_5frewards_33',['has_generic_rewards',['../structmission__type.html#aec7ba08c3e7befbc16729ea3a2e96b90',1,'mission_type']]],
   ['has_5fnew_5fitems_34',['has_new_items',['../classnpc.html#a9ca344b214e47beec525f78ebc83dc64',1,'npc']]],
-  ['has_5fthreshold_35',['has_threshold',['../structaim__type.html#a26dc7ca55f61cd28bc534dc21d53164d',1,'aim_type']]],
+  ['has_5fthreshold_35',['has_threshold',['../structranged_1_1aim__type.html#a3e379a6edec5465db69600543d4ad38f',1,'ranged::aim_type']]],
   ['hash_5fto_5fid_5fmigration_36',['hash_to_id_migration',['../classsnippet__library.html#a032b92272a495c241dfa46736343133f',1,'snippet_library']]],
   ['hauling_37',['hauling',['../classCharacter.html#a4635ee40a3d97353c7a76ef5e71ad283',1,'Character']]],
   ['hboard_38',['hboard',['../structdrag__column.html#a44cbffdfc94d5bb4901b21b5f97b4eed',1,'drag_column']]],
@@ -57,7 +57,7 @@ var searchData=
   ['heat_5fradiation_54',['heat_radiation',['../structter__t.html#aeb7bb548f17f7aa9d33f635baa9f1ab1',1,'ter_t']]],
   ['height_55',['height',['../classrect__range.html#a648005422c3debf84d08c90ba2bdcbc0',1,'rect_range::height()'],['../classwindow__panel.html#a33a8f98ed818483429585a74442ed466',1,'window_panel::height()'],['../classinventory__column.html#aa13f10dbd12a5441bc3e47af7c14ef82',1,'inventory_column::height()'],['../classcomputer__session.html#acab1606e3fde7a0dfaf7559288f2464a',1,'computer_session::height()']]],
   ['height_5f3d_56',['height_3d',['../structtile__type.html#afda60888f095bae6ba9bbdd657039d2b',1,'tile_type']]],
-  ['help_57',['help',['../structaim__type.html#a7713b1fde40d102035a0dea06ff334ed',1,'aim_type']]],
+  ['help_57',['help',['../structranged_1_1aim__type.html#ab42c19d743eccdd4175eefa27b08fc97',1,'ranged::aim_type']]],
   ['help_5fgroup_58',['help_group',['../structanonymous__namespace_02main_8cpp_03_1_1arg__handler.html#a16ce63e57b5178fb6d0f5008e5580b14',1,'anonymous_namespace{main.cpp}::arg_handler']]],
   ['help_5fkeybindings_59',['HELP_KEYBINDINGS',['../input_8cpp.html#a3fc9bc5774aa0c20f273e2235a37cc96',1,'input.cpp']]],
   ['help_5ftext_60',['help_text',['../classMessages_1_1dialog.html#a9316cb2593a0a15ed1742d4ddc9b04bc',1,'Messages::dialog']]],
@@ -125,6 +125,6 @@ var searchData=
   ['humidity_5fmax_122',['humidity_max',['../structweather__requirements.html#a18c98f11a7701165cb4f6fa8f73d3b34',1,'weather_requirements']]],
   ['humidity_5fmin_123',['humidity_min',['../structweather__requirements.html#a28a41921ae70be2c5f69e23ced3f7857',1,'weather_requirements']]],
   ['humidity_5fmod_124',['humidity_mod',['../structseason__modifier.html#a431f81e8a4e90b613532d42318dfe447',1,'season_modifier']]],
-  ['hunger_125',['hunger',['../structdefense__game.html#aa1b843d4e67d660e6eb76013a31a0342',1,'defense_game::hunger()'],['../structmutation__branch.html#a8941954c7a99dfa4f8d61f0d0e569af2',1,'mutation_branch::hunger()'],['../structneeds__rates.html#a537fb128d773bdfedddacda084367e3a',1,'needs_rates::hunger()']]],
+  ['hunger_125',['hunger',['../structneeds__rates.html#a537fb128d773bdfedddacda084367e3a',1,'needs_rates::hunger()'],['../structdefense__game.html#aa1b843d4e67d660e6eb76013a31a0342',1,'defense_game::hunger()'],['../structmutation__branch.html#a8941954c7a99dfa4f8d61f0d0e569af2',1,'mutation_branch::hunger()']]],
   ['hurt_5fsizing_126',['hurt_sizing',['../classeffect__type.html#a0f0a21ce4345e5ad6555664d2af94b39',1,'effect_type']]]
 ];
