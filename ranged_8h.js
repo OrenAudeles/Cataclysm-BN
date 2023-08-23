@@ -17,11 +17,12 @@ var ranged_8h =
     [ "effective_dispersion", "ranged_8h.html#a77dfe116a20cfa50c55a3c2073408e63", null ],
     [ "execute_shaped_attack", "ranged_8h.html#ade9b38890f46ab6cbe94e1004f0ea5f1", null ],
     [ "expected_coverage", "ranged_8h.html#a7b4da33d1d9391123845f299f1f156dc", null ],
-    [ "fire_gun", "ranged_8h.html#ad38c286e96d65ab218906f3120b01e8a", null ],
+    [ "fire_gun", "ranged_8h.html#ae09161f6a90d6bc3282a1e0f50c439b2", null ],
     [ "fire_gun", "ranged_8h.html#a0bb67d4debaf06355d3b7c8234fda44e", null ],
     [ "get_aim_types", "ranged_8h.html#a751a40c271349c3ea821c5badd49e42f", null ],
     [ "get_fastest_sight", "ranged_8h.html#a3dbef919e3efee8967ddbcba998a55f3", null ],
     [ "get_most_accurate_sight", "ranged_8h.html#ad70a4328dc4c6c69d45b40f23d90195d", null ],
+    [ "get_shape_factory", "ranged_8h.html#ae6187116a03c20b18135711490b2e961", null ],
     [ "get_str_draw_penalty", "ranged_8h.html#a4c8c85e0249f67213d9994612315aa3e", null ],
     [ "get_weapon_dispersion", "ranged_8h.html#a8b31304e61913a0072ad6df6e16bc932", null ],
     [ "gun_engagement_moves", "ranged_8h.html#a1091f2ff573108fbf6d9f56f0c1d2187", null ],
@@ -49,6 +50,7 @@ var ranged_8h =
     [ "targetable_creatures", "ranged_8h.html#a41e7f0a8b2c552d2f8ec4c8a4930c7af", null ],
     [ "throw_cost", "ranged_8h.html#aeadf3905fda7ac9f7e6e13d78d6beadb", null ],
     [ "throw_dispersion_per_dodge", "ranged_8h.html#afd6b1338d47e5ecd34de75b921c11113", null ],
-    [ "throw_item", "ranged_8h.html#a3a0f866a4bec031e85ccbb05148319b5", null ],
-    [ "throwing_dispersion", "ranged_8h.html#a54895869f69a00b4a74df15057a9a780", null ]
+    [ "throw_item", "ranged_8h.html#aaaa4e309fe9b7ad615954c9f7524ddce", null ],
+    [ "throwing_dispersion", "ranged_8h.html#a54895869f69a00b4a74df15057a9a780", null ],
+    [ "time_to_attack", "ranged_8h.html#ad3183129b44ab2775b50bb90da5c5333", null ]
 ];

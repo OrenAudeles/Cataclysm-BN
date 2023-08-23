@@ -24,6 +24,10 @@ var namespaces_dup =
     [ "anonymous_namespace{achievement.cpp}", "namespaceanonymous__namespace_02achievement_8cpp_03.html", [
       [ "achievement_factory", "namespaceanonymous__namespace_02achievement_8cpp_03.html#a32c1d3d3a3b3027955df478045239b5a", null ]
     ] ],
+    [ "anonymous_namespace{action.cpp}", "namespaceanonymous__namespace_02action_8cpp_03.html", [
+      [ "make_register_actions", "namespaceanonymous__namespace_02action_8cpp_03.html#ae38efca4bfa981d31097109516f6f18d", null ],
+      [ "make_register_categories", "namespaceanonymous__namespace_02action_8cpp_03.html#a6ae518ba19482502c7499a86503c5ef0", null ]
+    ] ],
     [ "anonymous_namespace{ammo.cpp}", "namespaceanonymous__namespace_02ammo_8cpp_03.html", [
       [ "ammo_map_t", "namespaceanonymous__namespace_02ammo_8cpp_03.html#a1d064e67562b19b60f871ed2dd6a3d23", null ],
       [ "all_ammunition_types", "namespaceanonymous__namespace_02ammo_8cpp_03.html#ad976e077c2d7a7af5b9a939495ae395c", null ]
@@ -50,6 +54,22 @@ var namespaces_dup =
     [ "anonymous_namespace{bionics_ui.cpp}", "namespaceanonymous__namespace_02bionics__ui_8cpp_03.html", "namespaceanonymous__namespace_02bionics__ui_8cpp_03" ],
     [ "anonymous_namespace{bodypart.cpp}", "namespaceanonymous__namespace_02bodypart_8cpp_03.html", [
       [ "body_part_factory", "namespaceanonymous__namespace_02bodypart_8cpp_03.html#aaae7b9ce256ab1fee1bd36587d67cf19", null ]
+    ] ],
+    [ "anonymous_namespace{character.cpp}", "namespaceanonymous__namespace_02character_8cpp_03.html", [
+      [ "ShieldLevel", "namespaceanonymous__namespace_02character_8cpp_03.html#a84cb26eb0a6ff55af0d1eb4733bb17e7", [
+        [ "None", "namespaceanonymous__namespace_02character_8cpp_03.html#a84cb26eb0a6ff55af0d1eb4733bb17e7a6adf97f83acf6453d4a6a4b1070f3754", null ],
+        [ "Block1", "namespaceanonymous__namespace_02character_8cpp_03.html#a84cb26eb0a6ff55af0d1eb4733bb17e7ab3e25d19bfd437de6063953f0f4ac6ac", null ],
+        [ "Block2", "namespaceanonymous__namespace_02character_8cpp_03.html#a84cb26eb0a6ff55af0d1eb4733bb17e7a3fbe9f2beae8654b86e2d9570f63d4e2", null ],
+        [ "Block3", "namespaceanonymous__namespace_02character_8cpp_03.html#a84cb26eb0a6ff55af0d1eb4733bb17e7af7c48a040d5301f4e2deff0e83dd9244", null ]
+      ] ],
+      [ "coverage_modifier_by_technic", "namespaceanonymous__namespace_02character_8cpp_03.html#a2dbc388919a1f34a120f5c043d47e3bc", null ],
+      [ "get_block_amount", "namespaceanonymous__namespace_02character_8cpp_03.html#a7f0ce55771bd1369be517a11b734dca9", null ],
+      [ "get_shield_resist", "namespaceanonymous__namespace_02character_8cpp_03.html#a6b3d7543fe85797fc18fb46c69b26e27", null ],
+      [ "is_covered_by_shield", "namespaceanonymous__namespace_02character_8cpp_03.html#acbaa7822725451c89b842e3fb47fc247", null ],
+      [ "is_foot_hit", "namespaceanonymous__namespace_02character_8cpp_03.html#a1c95f1950f2aa4201bb83df8ce528eaf", null ],
+      [ "is_leg_hit", "namespaceanonymous__namespace_02character_8cpp_03.html#aa151a61e3844b320a98c7bb19e2d0d4f", null ],
+      [ "is_valid_hallucination", "namespaceanonymous__namespace_02character_8cpp_03.html#a5355d5836149e55a0eefe7f7decff790", null ],
+      [ "shield_level", "namespaceanonymous__namespace_02character_8cpp_03.html#aa51773b9eedf01d70677bec3940d23da", null ]
     ] ],
     [ "anonymous_namespace{character_display.cpp}", "namespaceanonymous__namespace_02character__display_8cpp_03.html", [
       [ "player_display_tab", "namespaceanonymous__namespace_02character__display_8cpp_03.html#a5960c87973f8859f2e6997206a97fb09", [
@@ -127,6 +147,14 @@ var namespaces_dup =
       [ "highlight_good_bad_none", "namespaceanonymous__namespace_02game__inventory_8cpp_03.html#a3533436c1886981d1f001d1a0a43469d", null ]
     ] ],
     [ "anonymous_namespace{gates.cpp}", "namespaceanonymous__namespace_02gates_8cpp_03.html", "namespaceanonymous__namespace_02gates_8cpp_03" ],
+    [ "anonymous_namespace{grab.cpp}", "namespaceanonymous__namespace_02grab_8cpp_03.html", [
+      [ "base_str_req", "namespaceanonymous__namespace_02grab_8cpp_03.html#a02d6d34fc7964eadb7cf756dea36cb65", null ],
+      [ "get_effective_wheels", "namespaceanonymous__namespace_02grab_8cpp_03.html#ad35dd5b4feeeb22a3b4a987aa2c21843", null ],
+      [ "get_grabbed_vehicle_movecost", "namespaceanonymous__namespace_02grab_8cpp_03.html#a3bff6e6ccc49620f17943476f63de2cd", null ],
+      [ "get_vehicle_str_requirement", "namespaceanonymous__namespace_02grab_8cpp_03.html#aa5d7deac48d30d89041438a436a6377c", null ],
+      [ "make_scraping_noise", "namespaceanonymous__namespace_02grab_8cpp_03.html#ad70d62f6a74dcedb50a8d77cdcd3ad08", null ],
+      [ "offroad_str_req_cap", "namespaceanonymous__namespace_02grab_8cpp_03.html#a9ffee7ffe58226b58a1f284ec3f6a856", null ]
+    ] ],
     [ "anonymous_namespace{iexamine.cpp}", "namespaceanonymous__namespace_02iexamine_8cpp_03.html", "namespaceanonymous__namespace_02iexamine_8cpp_03" ],
     [ "anonymous_namespace{item_category.cpp}", "namespaceanonymous__namespace_02item__category_8cpp_03.html", [
       [ "item_category_factory", "namespaceanonymous__namespace_02item__category_8cpp_03.html#af08a772fbabbbc0c65e9f8f29b163d2e", null ]
@@ -162,7 +190,8 @@ var namespaces_dup =
     [ "anonymous_namespace{martialarts.cpp}", "namespaceanonymous__namespace_02martialarts_8cpp_03.html", [
       [ "ma_buffs", "namespaceanonymous__namespace_02martialarts_8cpp_03.html#ad4fb4a84fae57a9c40c693ca2701b45c", null ],
       [ "ma_techniques", "namespaceanonymous__namespace_02martialarts_8cpp_03.html#aae3f3de3b7baac697dfacb78ad4a80ea", null ],
-      [ "martialarts", "namespaceanonymous__namespace_02martialarts_8cpp_03.html#adf8fd9cfd1bea36da26edfc99075b372", null ]
+      [ "martialarts", "namespaceanonymous__namespace_02martialarts_8cpp_03.html#adf8fd9cfd1bea36da26edfc99075b372", null ],
+      [ "weapon_category_factory", "namespaceanonymous__namespace_02martialarts_8cpp_03.html#a47e8666a1e458f8836fd4beb7c2e00b7", null ]
     ] ],
     [ "anonymous_namespace{material.cpp}", "namespaceanonymous__namespace_02material_8cpp_03.html", [
       [ "material_data", "namespaceanonymous__namespace_02material_8cpp_03.html#a7ca756e3448d6202a95086c3d2fa0005", null ]
@@ -178,8 +207,7 @@ var namespaces_dup =
       [ "avoidance_vehicles_radius", "namespaceanonymous__namespace_02npcmove_8cpp_03.html#a14108754d46e7a886364e08c7817615b", null ],
       [ "defense_cbms", "namespaceanonymous__namespace_02npcmove_8cpp_03.html#a21c4e6ec47c5c917485f57ab35c5f0b1", null ],
       [ "health_cbms", "namespaceanonymous__namespace_02npcmove_8cpp_03.html#a4ebf7d016fe3acf5365eb4bb84abf223", null ],
-      [ "power_cbms", "namespaceanonymous__namespace_02npcmove_8cpp_03.html#a20140414ec15ffd3281ee969ad2df035", null ],
-      [ "weapon_cbms", "namespaceanonymous__namespace_02npcmove_8cpp_03.html#a8ac361f76a60d142bb729e731f1f99d7", null ]
+      [ "power_cbms", "namespaceanonymous__namespace_02npcmove_8cpp_03.html#a20140414ec15ffd3281ee969ad2df035", null ]
     ] ],
     [ "anonymous_namespace{overmap.cpp}", "namespaceanonymous__namespace_02overmap_8cpp_03.html", [
       [ "land_use_codes", "namespaceanonymous__namespace_02overmap_8cpp_03.html#aa149a1553a392b8ec618f79d31b13ab0", null ],
@@ -248,9 +276,9 @@ var namespaces_dup =
       [ "fire_turret_manual", "namespaceavatar__action.html#a00b91d17ef44b22858cab0b9dc798301", null ],
       [ "fire_wielded_weapon", "namespaceavatar__action.html#a66522a5f8e132e3db71c514ca8767b0f", null ],
       [ "mend", "namespaceavatar__action.html#af2c58da1638b239e9df99d2a4611cde8", null ],
-      [ "move", "namespaceavatar__action.html#a27b98a9164601ec7d6b4d233ffc19e66", null ],
       [ "move", "namespaceavatar__action.html#a76ba74774376a08222b8cdcce08f7304", null ],
-      [ "plthrow", "namespaceavatar__action.html#a88a027e47bb814ff61be3e15bd0b8777", null ],
+      [ "move", "namespaceavatar__action.html#a4180afe5f02be501278dca2dcfda87c3", null ],
+      [ "plthrow", "namespaceavatar__action.html#a2ff3ea3901fd1f5e85513178133c03f5", null ],
       [ "ramp_move", "namespaceavatar__action.html#abadb3333d387007017d11836c606f1e5", null ],
       [ "reload", "namespaceavatar__action.html#a03cf09d521b2df8ec4e14523b73804b4", null ],
       [ "reload_item", "namespaceavatar__action.html#a074ed32b4d421de7f0749e9aef6fe0c9", null ],
@@ -264,9 +292,21 @@ var namespaces_dup =
       [ "wield", "namespaceavatar__action.html#a4237c55ad7f626915cdb297d52841b8f", null ]
     ] ],
     [ "avatar_funcs", "namespaceavatar__funcs.html", [
+      [ "add_or_drop_with_msg", "namespaceavatar__funcs.html#a63299af2c1172957092be68037b047f4", null ],
+      [ "gunmod_add", "namespaceavatar__funcs.html#a33caecf3332887bbdf26598147a39ebc", null ],
+      [ "gunmod_installation_odds", "namespaceavatar__funcs.html#ac14b6f126d2c2b3e9a34e3ae6f99827f", null ],
+      [ "gunmod_remove", "namespaceavatar__funcs.html#a1bb52c7ff53526e659bfc25b8b53d620", null ],
+      [ "handle_theft_witnesses", "namespaceavatar__funcs.html#a0cb75fd1a3b035578ab495d30d8ee0bd", null ],
+      [ "has_mod", "namespaceavatar__funcs.html#aaef06fa3af228d5fa10ce372a8d95fb9", null ],
+      [ "is_pet_food", "namespaceavatar__funcs.html#a4c319ba53f385ba862179b8540d2ead9", null ],
+      [ "list_potential_theft_witnesses", "namespaceavatar__funcs.html#ae3e48352faacf76db0e461d8d0e697ea", null ],
+      [ "mend_item", "namespaceavatar__funcs.html#a97e418d541f419827d11e0460916ad33", null ],
+      [ "toolmod_add", "namespaceavatar__funcs.html#ac216d229bfa88148e0e4afa8bdbe9ffc", null ],
       [ "try_disarm_npc", "namespaceavatar__funcs.html#a0e31be97cb02c9a6aa2ec0c547149d3e", null ],
       [ "try_steal_from_npc", "namespaceavatar__funcs.html#a2c717f781583bcd89e23c46ef1e3f893", null ],
-      [ "try_to_sleep", "namespaceavatar__funcs.html#a916f182d460c34fb5df1804432a4505d", null ]
+      [ "try_to_sleep", "namespaceavatar__funcs.html#a916f182d460c34fb5df1804432a4505d", null ],
+      [ "unload_item", "namespaceavatar__funcs.html#abca10e5194d32b19cc88d6ffd07c56d6", null ],
+      [ "use_item", "namespaceavatar__funcs.html#a9987c049e9795d0bb04521808e5f7151", null ]
     ] ],
     [ "base_camps", "namespacebase__camps.html", "namespacebase__camps" ],
     [ "behavior", "namespacebehavior.html", "namespacebehavior" ],
@@ -301,8 +341,8 @@ var namespaces_dup =
     [ "cata_variant_detail", "namespacecata__variant__detail.html", "namespacecata__variant__detail" ],
     [ "catacurses", "namespacecatacurses.html", "namespacecatacurses" ],
     [ "CellularAutomata", "namespaceCellularAutomata.html", [
-      [ "generate_cellular_automaton", "namespaceCellularAutomata.html#a7cad9f62c294f80ca741010f4b9b6f7b", null ],
-      [ "neighbor_count", "namespaceCellularAutomata.html#a0e75d0a4380996da33f3200f42f35e46", null ]
+      [ "generate_cellular_automaton", "namespaceCellularAutomata.html#a4c29382ca123e486076190e1266ac2c0", null ],
+      [ "neighbor_count", "namespaceCellularAutomata.html#a32e295db5ab5a34d5fbe65d7fb0924e0", null ]
     ] ],
     [ "char_creation", "namespacechar__creation.html", [
       [ "description_selector", "namespacechar__creation.html#a9ba8fcc12acdec7ace3940a82223d9a6", [
@@ -519,6 +559,21 @@ var namespaces_dup =
       [ "run", "namespaceexamine__item__menu.html#a0ef68cd5b60cc38b1d1655c81dea6b8c", null ]
     ] ],
     [ "explosion_handler", "namespaceexplosion__handler.html", "namespaceexplosion__handler" ],
+    [ "ExplosionConstants", "namespaceExplosionConstants.html", [
+      [ "BASH_RANDOM_FACTOR", "namespaceExplosionConstants.html#a8c563e08c54ce17d320c4f2612d0ecee", null ],
+      [ "EXPLOSION_CALIBRATION_POWER", "namespaceExplosionConstants.html#a32f66c60a716590477b2146c3b780d8f", null ],
+      [ "FLING_MAX_RANGE", "namespaceExplosionConstants.html#ac4b919136103ca5eb8f769428f79979b", null ],
+      [ "FLING_SLOWDOWN", "namespaceExplosionConstants.html#ad6858b89662b48ecfbd3b82251299dc4", null ],
+      [ "FLING_THRESHOLD", "namespaceExplosionConstants.html#ad1cc0f9b671f3ddf8de188e51a48f983", null ],
+      [ "ITEM_FLING_FACTOR", "namespaceExplosionConstants.html#a47530022cd90a1eb082dcddf4877636a", null ],
+      [ "ITEM_FLING_RANDOM_FACTOR", "namespaceExplosionConstants.html#a832a873f1c16de84289be23662512362", null ],
+      [ "MOB_FLING_FACTOR", "namespaceExplosionConstants.html#a66c91c71e8709c45ebf308f4d009a032", null ],
+      [ "MULTIBASH_COUNT", "namespaceExplosionConstants.html#aa9232b67f850df28321b2edd57023755", null ],
+      [ "RESTITUTION_COEFF", "namespaceExplosionConstants.html#af0281f18a9ab8737375217dbc17ab5a1", null ],
+      [ "SHRAPNEL_OBSTACLE_REDUCTION", "namespaceExplosionConstants.html#ab41493d54e1187212d5a7e2085eac76a", null ],
+      [ "VEHICLE_DAMAGE_MULT", "namespaceExplosionConstants.html#a50c0eb350e87df8eb1ff983f8b2e104e", null ],
+      [ "Z_LEVEL_DIST", "namespaceExplosionConstants.html#a1531b40018425ca267ac14b9e6ee4c74", null ]
+    ] ],
     [ "ff", "namespaceff.html", [
       [ "point_flood_fill_4_connected", "namespaceff.html#adaea099ecca20d124ab3a3d2f2bf79f9", null ]
     ] ],
@@ -605,8 +660,8 @@ var namespaces_dup =
       [ "gaspump", "namespaceiexamine.html#ac5ce69b72dee988c76accafb9e881709", null ],
       [ "get_harvest_items", "namespaceiexamine.html#a063625d8728319f6e54a792b609f1719", null ],
       [ "get_seed_entries", "namespaceiexamine.html#a52eaa83fb4f8dacccac4a5e736cf3fe1", null ],
-      [ "getGasPumpByNumber", "namespaceiexamine.html#a6558b68c15b7cc0d7d330507c6f62646", null ],
-      [ "getNearFilledGasTank", "namespaceiexamine.html#abcb94676fc5df4c67f67f0062acc8479", null ],
+      [ "getGasPumpByNumber", "namespaceiexamine.html#ada89967c78ff4632820932976c12ab8b", null ],
+      [ "getNearFilledGasTank", "namespaceiexamine.html#acdcb6865f2a40fffafcff3115d93b693", null ],
       [ "gunsafe_el", "namespaceiexamine.html#a743ddabf5650b28322c4d674020d2099", null ],
       [ "harvest_furn", "namespaceiexamine.html#a387213cfb1350c7bbdffc067c42e135b", null ],
       [ "harvest_furn_nectar", "namespaceiexamine.html#ada197d8d6086e268c3e3e18b02cb8112", null ],
@@ -672,7 +727,8 @@ var namespaces_dup =
     ] ],
     [ "io", "namespaceio.html", "namespaceio" ],
     [ "item_funcs", "namespaceitem__funcs.html", [
-      [ "can_be_unloaded", "namespaceitem__funcs.html#a59e0738ff81bbd95e725baecf3e23545", null ]
+      [ "can_be_unloaded", "namespaceitem__funcs.html#a59e0738ff81bbd95e725baecf3e23545", null ],
+      [ "shots_remaining", "namespaceitem__funcs.html#a04f6aa7c848c842a119f6e07e0dd7c6b", null ]
     ] ],
     [ "item_group", "namespaceitem__group.html", [
       [ "ItemList", "namespaceitem__group.html#a1756cb07c624c3169988316a8615ff69", null ],
@@ -775,6 +831,7 @@ var namespaces_dup =
       [ "granade", "namespaceiuse.html#a2060aa4647487f823f8e42e88fc214ea", null ],
       [ "granade_act", "namespaceiuse.html#a4945736059f06b41ffce6c4070f8f5e1", null ],
       [ "grenade_inc_act", "namespaceiuse.html#aead9366f186a44fcd9b0966c0d13a86a", null ],
+      [ "gun_clean", "namespaceiuse.html#a66d97835bafa6d159d4469e07c89c8fd", null ],
       [ "gun_repair", "namespaceiuse.html#a7018b6487f94b8e782bd6523f24da9da", null ],
       [ "gunmod_attach", "namespaceiuse.html#aee6388125347281819df5c608e1e2008", null ],
       [ "hacksaw", "namespaceiuse.html#a1ed26c836be484fe8abed447dd276260", null ],
@@ -799,6 +856,7 @@ var namespaces_dup =
       [ "meth", "namespaceiuse.html#a1c55d9f8022241b470d2d2e3f26ccbb3", null ],
       [ "mind_splicer", "namespaceiuse.html#a18ded3f37f4b03f690f1d23e5b4f0a50", null ],
       [ "mininuke", "namespaceiuse.html#a21c8e65ced80f9b26011bc78dfa450a6", null ],
+      [ "modify_grid_connections", "namespaceiuse.html#a4a2c4912356e6a153420d74fdd6c36c5", null ],
       [ "molotov_lit", "namespaceiuse.html#ada78e14562e559ac1a3cc6f84f4c1604", null ],
       [ "mop", "namespaceiuse.html#a8f16cb027c9e2d876a8a6617c6b62463", null ],
       [ "mp3", "namespaceiuse.html#ae84247499c1f9c3996f54bb5e849ffe5", null ],
@@ -905,7 +963,7 @@ var namespaces_dup =
       [ "perform_liquid_transfer", "namespaceliquid__handler.html#a8c1765bcc2eb292f1a8cc24f0ca2b8b9", null ]
     ] ],
     [ "map_funcs", "namespacemap__funcs.html", [
-      [ "climbing_cost", "namespacemap__funcs.html#a3d04b9be6f6d41f70f82070ae568e7b2", null ],
+      [ "climbing_cost", "namespacemap__funcs.html#a8f22c4f8a377d195788aa0fa4d315491", null ],
       [ "migo_nerve_cage_removal", "namespacemap__funcs.html#a60f9a4c25252a0b8cffa456f6bc25887", null ]
     ] ],
     [ "MAP_SHARING", "namespaceMAP__SHARING.html", [
@@ -978,7 +1036,7 @@ var namespaces_dup =
       [ "mx_shrubbery", "namespaceMapExtras.html#a7d1c8eaa2688dcd59193e585e71bc0f6", null ],
       [ "mx_spider", "namespaceMapExtras.html#a1caac5b7408bb99894c73256625604a3", null ],
       [ "mx_supplydrop", "namespaceMapExtras.html#a63a632a4de744db6d8997bfefefc6172", null ],
-      [ "place_fumarole", "namespaceMapExtras.html#abbf5ec4c4ffcbf9a850735dfd9c623c4", null ],
+      [ "place_fumarole", "namespaceMapExtras.html#a704105cd733d55698ae55723d25e778a", null ],
       [ "reset", "namespaceMapExtras.html#abcc7ff03f78ad0890e4e19ae2fe62dea", null ],
       [ "all_function_names", "namespaceMapExtras.html#a161969430a2960b3408db9567fb55d0c", null ],
       [ "builtin_functions", "namespaceMapExtras.html#a98f5385324714fff39e9ce79212dfff5", null ]
@@ -1165,7 +1223,7 @@ var namespaces_dup =
     ] ],
     [ "Messages", "namespaceMessages.html", "namespaceMessages" ],
     [ "mission_util", "namespacemission__util.html", [
-      [ "assign_mission_target", "namespacemission__util.html#ac7d7475da2334157683138fb90ffe60d", null ],
+      [ "assign_mission_target", "namespacemission__util.html#ab332d2750152f7d9853554d0b8a25107", null ],
       [ "get_om_terrain_pos", "namespacemission__util.html#afae4bdb979b73cdbe3b7209bb4bb2fe0", null ],
       [ "load_funcs", "namespacemission__util.html#a7c1dc5479a7502980f56103b4e865a8c", null ],
       [ "parse_mission_om_target", "namespacemission__util.html#a17fa3f1df097e6dc1fef503cb5a90f0b", null ],
@@ -1184,8 +1242,8 @@ var namespaces_dup =
       [ "t_mod_list", "namespacemod__management.html#a2b453b753864424a211ee499133505ed", null ],
       [ "get_default_core_content_pack", "namespacemod__management.html#a822d52deafd2d501f0afbd604ccafdd8", null ],
       [ "load_mod_info", "namespacemod__management.html#a5041a8497495347e6999ac3e88261cf5", null ],
-      [ "load_mod_list", "namespacemod__management.html#a2327609c6925917f9a52fb4a54a0a661", null ],
-      [ "load_modfile", "namespacemod__management.html#a19b5c0c2b1726de2895bb31d75953a75", null ],
+      [ "load_mod_list", "namespacemod__management.html#a503fd19acbf51f6b1b2b408195d5ce1e", null ],
+      [ "load_modfile", "namespacemod__management.html#ae1568fab20321c23f4ff2aead0461808", null ],
       [ "load_mods_from", "namespacemod__management.html#af1e05b6a2dcdf896a4334923f1bd38e2", null ],
       [ "save_mod_list", "namespacemod__management.html#ab0596e4d8d100d3661b175b2868b1e60", null ]
     ] ],
@@ -1217,6 +1275,7 @@ var namespaces_dup =
       [ "start_leading", "namespacemonexamine.html#a1c203b2eee53d0bcd927c4271e410c87", null ],
       [ "stop_leading", "namespacemonexamine.html#a663586e54746514203b84f302e5b7faf", null ],
       [ "swap", "namespacemonexamine.html#af4ee634a5921005409a5f3aa79e4a8a3", null ],
+      [ "take_items_from", "namespacemonexamine.html#a2e9ee18138d440c2bcaf2833826c7211", null ],
       [ "tie_pet", "namespacemonexamine.html#ae76b120af015a9112d4ae33380b28164", null ],
       [ "untie_pet", "namespacemonexamine.html#a3500f4f80a6dc864dac50a5af744be0a", null ]
     ] ],
@@ -1257,10 +1316,12 @@ var namespaces_dup =
       [ "random_good_trait", "namespacenewcharacter.html#af26bc6eecdfca795bacbc3ac398f4578", null ]
     ] ],
     [ "npc_ai", "namespacenpc__ai.html", [
-      [ "gun_value", "namespacenpc__ai.html#a9019036bc8d7314e1bb9fb1624afb429", null ],
+      [ "best_mode_for_range", "namespacenpc__ai.html#a0e953b9c8d447ec25fc27c06a6e3d55c", null ],
+      [ "gun_value", "namespacenpc__ai.html#a198ce7a4cff534bf1df12f584bff1197", null ],
       [ "melee_value", "namespacenpc__ai.html#a15c5ded877137a648d04762228055b66", null ],
       [ "unarmed_value", "namespacenpc__ai.html#a64daf871b45496787e445f932f4381d3", null ],
-      [ "weapon_value", "namespacenpc__ai.html#a14d62aa6c1fc78bcfe3c3bb845d913cd", null ]
+      [ "weapon_value", "namespacenpc__ai.html#a6fa541a904a63a5b95b20ce9000254d8", null ],
+      [ "wielded_value", "namespacenpc__ai.html#a03081587a4844207a7386844f8a31cd5", null ]
     ] ],
     [ "npc_factions", "namespacenpc__factions.html", [
       [ "relationship", "namespacenpc__factions.html#af09ec48d0dc133795062d1424c486686", [
@@ -1276,6 +1337,10 @@ var namespaces_dup =
       [ "finalize", "namespacenpc__factions.html#ae1283babfca38034cb52b28fd6e14143", null ],
       [ "all_templates", "namespacenpc__factions.html#a0cfe595c2dd834c99b01b9b883177f93", null ],
       [ "relation_strs", "namespacenpc__factions.html#abc290a7ac3e44667ef68d4371334b535", null ]
+    ] ],
+    [ "npc_overmap", "namespacenpc__overmap.html", [
+      [ "spawn_chance_in_hour", "namespacenpc__overmap.html#a80ffb65eecf888d8d81c8ef5a306dab5", null ],
+      [ "density_search_radius", "namespacenpc__overmap.html#ac0b9c7d41702806f258eff73b1c8fc8d", null ]
     ] ],
     [ "npc_trading", "namespacenpc__trading.html", [
       [ "cash_to_favor", "namespacenpc__trading.html#a501e43e4b4136a85e2773fbc89f19e69", null ],
@@ -1305,8 +1370,8 @@ var namespaces_dup =
       [ "name", "namespaceom__direction.html#a8ba958ccfad28c0a5572a04dd1428f32", null ],
       [ "opposite", "namespaceom__direction.html#a744200df724ee18bb82152e165e7b694", null ],
       [ "random", "namespaceom__direction.html#a0fdbb3cc8e25454026b9ab57f9b91c69", null ],
-      [ "rotate", "namespaceom__direction.html#a81218991d18ce76097c769d5c3f185c2", null ],
       [ "rotate", "namespaceom__direction.html#a0c2e6833cb139b3a28e7bfe7df5f3892", null ],
+      [ "rotate", "namespaceom__direction.html#a61583b9687e31a24425e57ce443c31d5", null ],
       [ "rotate_symbol", "namespaceom__direction.html#a1a2e4f8ffd98ed611f555d655bb018ae", null ],
       [ "turn_left", "namespaceom__direction.html#a55a436b570f79ab5500b918150742a8e", null ],
       [ "turn_random", "namespaceom__direction.html#ab3d71532342ed72a0e77b239d0d0dac9", null ],
@@ -1384,9 +1449,7 @@ var namespaces_dup =
       [ "help", "namespacePATH__INFO.html#aaf487dc39e4ae73021efefcd2823b8f0", null ],
       [ "init_base_path", "namespacePATH__INFO.html#a46fcd07deaf63ce8cb7868650c74b616", null ],
       [ "init_user_dir", "namespacePATH__INFO.html#a703803ec701d6d98cd654cf9e3c7aadc", null ],
-      [ "keybindings", "namespacePATH__INFO.html#a260f287e95e936a3370680ac46c7571d", null ],
-      [ "keybindings_edit_creature", "namespacePATH__INFO.html#ab3d95df4eec0fef93da1209a72218d92", null ],
-      [ "keybindings_vehicle", "namespacePATH__INFO.html#a62b393a7371282a42628555ca7153af3", null ],
+      [ "keybindingsdir", "namespacePATH__INFO.html#a1e9ba1a402f471d94423691877ec77f6", null ],
       [ "language_defs_file", "namespacePATH__INFO.html#a87c3bb74433855094b83a53bfdd92852", null ],
       [ "lastworld", "namespacePATH__INFO.html#a8c382696ff179ba28e1f06d7cfdd4436", null ],
       [ "main_menu_tips", "namespacePATH__INFO.html#aabcf66dffe7dc74841a1b92f729904d1", null ],
@@ -1438,6 +1501,10 @@ var namespaces_dup =
       [ "check_recharge_reqs", "namespacerelic__funcs.html#a9829f3587e85789d7762c8d0b7758b60", null ],
       [ "process_recharge", "namespacerelic__funcs.html#a6f22f33e09820e039215a475353a58a1", null ],
       [ "process_recharge_entry", "namespacerelic__funcs.html#a34d92da3e5874fc4a8e5e218c1ffc7b3", null ]
+    ] ],
+    [ "rot", "namespacerot.html", [
+      [ "temperature_flag_for_location", "namespacerot.html#a1568fc85485e5e2f7aaa861a2a99639f", null ],
+      [ "temperature_flag_for_part", "namespacerot.html#a008cc8b85d6b6c167f7bb10c5bf2f35c", null ]
     ] ],
     [ "rotatable_symbols", "namespacerotatable__symbols.html", [
       [ "get", "namespacerotatable__symbols.html#a7d2f855a39674de736a7829423a577f4", null ],
@@ -1737,12 +1804,13 @@ var namespaces_dup =
       [ "teleport", "namespaceteleport.html#a24cbf298b41e9fc23770c73d32e33a47", null ]
     ] ],
     [ "temperatures", "namespacetemperatures.html", [
-      [ "cold", "namespacetemperatures.html#a226cec67fad4075fe2cf6c31c355fbed", null ],
-      [ "freezer", "namespacetemperatures.html#ab2c68fc15267f67cc0e457377468d394", null ],
-      [ "freezing", "namespacetemperatures.html#aa801a22d811cee8d2deaabd3fbf89c36", null ],
-      [ "fridge", "namespacetemperatures.html#a6f72ea34f2d4840f4e3448227eb42b96", null ],
-      [ "hot", "namespacetemperatures.html#a892e6f2d08a4e00fd4532fa10883d934", null ],
-      [ "normal", "namespacetemperatures.html#a63ccaceafd632de17f412dfb5b3725fd", null ]
+      [ "cold", "namespacetemperatures.html#a6a0e3903fa0a749ee4c45d95eb6016d2", null ],
+      [ "freezer", "namespacetemperatures.html#ab5323589e14984e5c09cafa3b62def7d", null ],
+      [ "freezing", "namespacetemperatures.html#a6fe2961d424ef5406871b8ee32764330", null ],
+      [ "fridge", "namespacetemperatures.html#a6ac4b0413305dd75769d62227081d8b1", null ],
+      [ "hot", "namespacetemperatures.html#a3fa7c6789383b6c28db8a7b51764ca16", null ],
+      [ "normal", "namespacetemperatures.html#a9f523a38a9f55c0f553288964f823f38", null ],
+      [ "root_cellar", "namespacetemperatures.html#aed7454d776862538b76d7fef4965394d", null ]
     ] ],
     [ "to_cbc_migration", "namespaceto__cbc__migration.html", [
       [ "load", "namespaceto__cbc__migration.html#a252353398ab75623ad9416450c49ac8c", null ],

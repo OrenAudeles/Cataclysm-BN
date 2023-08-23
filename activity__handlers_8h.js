@@ -18,6 +18,10 @@ var activity__handlers_8h =
       [ "never", "activity__handlers_8h.html#a08dd09ef68bc61547f55f17bec54a15cac7561db7a418dd39b2201dfe110ab4a4", null ],
       [ "not_this", "activity__handlers_8h.html#a08dd09ef68bc61547f55f17bec54a15ca4bb72b6fd6db308ce11ba2fc2897f84b", null ]
     ] ],
+    [ "consume_type", "activity__handlers_8h.html#a51eb067383b3e2bf0c0a898564a4053e", [
+      [ "FOOD", "activity__handlers_8h.html#a51eb067383b3e2bf0c0a898564a4053eacc9284597026dcc021735c0970ca0c93", null ],
+      [ "DRINK", "activity__handlers_8h.html#a51eb067383b3e2bf0c0a898564a4053ea40a70b7e7618efcee118939aff893a3a", null ]
+    ] ],
     [ "do_activity_reason", "activity__handlers_8h.html#ae8548a48274a06c70c2ef9ee607d8b02", [
       [ "CAN_DO_CONSTRUCTION", "activity__handlers_8h.html#ae8548a48274a06c70c2ef9ee607d8b02a3da50daa2ab101773f862e36f60fc83b", null ],
       [ "CAN_DO_FETCH", "activity__handlers_8h.html#ae8548a48274a06c70c2ef9ee607d8b02af4545b5034bca16908a3ca2e5d36e561", null ],
@@ -68,7 +72,7 @@ var activity__handlers_8h =
     [ "burrow_finish", "activity__handlers_8h.html#a77ab2d13617aa58b9f52a12891916d60", null ],
     [ "butcher_do_turn", "activity__handlers_8h.html#ab9ecace8d5b66302279916dc02054bb7", null ],
     [ "butcher_finish", "activity__handlers_8h.html#a37691f6506e5f3fec27f615821796b44", null ],
-    [ "butcher_time_to_cut", "activity__handlers_8h.html#ab197546d87c39b70720af14982cbbd14", null ],
+    [ "butcher_time_to_cut", "activity__handlers_8h.html#a07b44a02243a4fcbea4b2dcf6b55a8d3", null ],
     [ "chop_logs_finish", "activity__handlers_8h.html#ad6fa92f01b47bf34b16cd5cc6948c7ff", null ],
     [ "chop_planks_finish", "activity__handlers_8h.html#a126a09db8374b69f9996653161772e33", null ],
     [ "chop_tree_do_turn", "activity__handlers_8h.html#a5de34613ec1b1f48380d6bfa1eb59541", null ],
@@ -93,7 +97,7 @@ var activity__handlers_8h =
     [ "fill_liquid_do_turn", "activity__handlers_8h.html#aa05f193716369c4291f98c4522e3c4f6", null ],
     [ "fill_pit_do_turn", "activity__handlers_8h.html#a83b19bb786f3b4135c19faf592b27814", null ],
     [ "fill_pit_finish", "activity__handlers_8h.html#aef4a236ea10a544e1ff2c981b46766d7", null ],
-    [ "find_auto_consume", "activity__handlers_8h.html#aab4d9965fb0cbf630cd17fd92ae115b1", null ],
+    [ "find_auto_consume", "activity__handlers_8h.html#a3fc36cae9716a6de94fef6e5d6a106aa", null ],
     [ "find_mount_do_turn", "activity__handlers_8h.html#adda9a48d266cd586ab081654a451fa4c", null ],
     [ "firstaid_finish", "activity__handlers_8h.html#a2e120dfda9c19fc46fc2b83c37120e25", null ],
     [ "fish_do_turn", "activity__handlers_8h.html#a99e1073bb67d82ed67658f28397dafe0", null ],

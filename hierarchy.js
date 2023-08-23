@@ -159,9 +159,6 @@ var hierarchy =
     [ "bionic_data", "structbionic__data.html", null ],
     [ "anonymous_namespace{bionics_ui.cpp}::bionic_sort_less", "structanonymous__namespace_02bionics__ui_8cpp_03_1_1bionic__sort__less.html", null ],
     [ "detail::bits< T >", "structdetail_1_1bits.html", null ],
-    [ "std::bitset< Bits >", null, [
-      [ "iteminfo_query", "classiteminfo__query.html", null ]
-    ] ],
     [ "player_morale::body_part_data", "structplayer__morale_1_1body__part__data.html", null ],
     [ "body_part_set", "classbody__part__set.html", null ],
     [ "body_part_type", "structbody__part__type.html", null ],
@@ -201,6 +198,7 @@ var hierarchy =
     [ "calendar_config", "classcalendar__config.html", null ],
     [ "camp_reference", "structcamp__reference.html", null ],
     [ "capture_debugmsg", "classcapture__debugmsg.html", null ],
+    [ "cat_order", "structcat__order.html", null ],
     [ "cata_ifstream", "structcata__ifstream.html", null ],
     [ "cata_ofstream", "structcata__ofstream.html", null ],
     [ "cata_tiles", "classcata__tiles.html", null ],
@@ -610,9 +608,6 @@ var hierarchy =
     ] ],
     [ "event_transformation", "classevent__transformation.html", null ],
     [ "std::exception", null, [
-      [ "std::logic_error", null, [
-        [ "cata::bad_optional_access", "classcata_1_1bad__optional__access.html", null ]
-      ] ],
       [ "std::runtime_error", null, [
         [ "JsonError", "classJsonError.html", null ],
         [ "format_error", "classformat__error.html", null ],
@@ -624,6 +619,8 @@ var hierarchy =
     [ "explosion_data", "structexplosion__data.html", null ],
     [ "explosion_handler::explosion_queue", "classexplosion__handler_1_1explosion__queue.html", null ],
     [ "explosion_tile", "structexplosion__tile.html", null ],
+    [ "explosion_handler::ExplosionEvent", "classexplosion__handler_1_1ExplosionEvent.html", null ],
+    [ "explosion_handler::ExplosionProcess", "classexplosion__handler_1_1ExplosionProcess.html", null ],
     [ "faction_manager", "classfaction__manager.html", null ],
     [ "faction_template", "classfaction__template.html", [
       [ "faction", "classfaction.html", null ]
@@ -672,6 +669,7 @@ var hierarchy =
     [ "field_entry", "classfield__entry.html", null ],
     [ "field_intensity_level", "structfield__intensity__level.html", null ],
     [ "field_type", "structfield__type.html", null ],
+    [ "explosion_handler::ExplosionEvent::FieldToAdd", "structexplosion__handler_1_1ExplosionEvent_1_1FieldToAdd.html", null ],
     [ "detail::fill_t< Char >", "structdetail_1_1fill__t.html", null ],
     [ "fire_data", "structfire__data.html", null ],
     [ "detail::fixed_buffer_traits", "classdetail_1_1fixed__buffer__traits.html", null ],
@@ -788,7 +786,6 @@ var hierarchy =
     ] ],
     [ "gun_mode", "classgun__mode.html", null ],
     [ "gun_modifier_data", "classgun__modifier__data.html", null ],
-    [ "gun_type_type", "classgun__type__type.html", null ],
     [ "gunmod_location", "classgunmod__location.html", null ],
     [ "basic_format_arg< Context >::handle", "classbasic__format__arg_1_1handle.html", null ],
     [ "Handler", null, [
@@ -812,7 +809,6 @@ var hierarchy =
     [ "std::hash< coords::coord_point< Point, Origin, Scale > >", "structstd_1_1hash_3_01coords_1_1coord__point_3_01Point_00_01Origin_00_01Scale_01_4_01_4.html", null ],
     [ "std::hash< description_affix >", "structstd_1_1hash_3_01description__affix_01_4.html", null ],
     [ "std::hash< event_type >", "structstd_1_1hash_3_01event__type_01_4.html", null ],
-    [ "std::hash< gun_type_type >", "structstd_1_1hash_3_01gun__type__type_01_4.html", null ],
     [ "std::hash< int_id< T > >", "structstd_1_1hash_3_01int__id_3_01T_01_4_01_4.html", null ],
     [ "std::hash< map_key >", "structstd_1_1hash_3_01map__key_01_4.html", null ],
     [ "std::hash< nc_color >", "structstd_1_1hash_3_01nc__color_01_4.html", null ],
@@ -850,7 +846,6 @@ var hierarchy =
     ] ],
     [ "cata::tuple_hash_detail::Impl< Tuple, 0 >", "structcata_1_1tuple__hash__detail_1_1Impl_3_01Tuple_00_010_01_4.html", null ],
     [ "pointmenu_cb::impl_t", "structpointmenu__cb_1_1impl__t.html", null ],
-    [ "cata::in_place_t", "structcata_1_1in__place__t.html", null ],
     [ "json_item_substitution::substitution::info", "structjson__item__substitution_1_1substitution_1_1info.html", null ],
     [ "input_context", "classinput__context.html", null ],
     [ "input_event", "structinput__event.html", null ],
@@ -914,7 +909,8 @@ var hierarchy =
       [ "selection_column_preset", "classselection__column__preset.html", null ],
       [ "weapon_inventory_preset", "classweapon__inventory__preset.html", [
         [ "holster_inventory_preset", "classholster__inventory__preset.html", null ],
-        [ "saw_barrel_inventory_preset", "classsaw__barrel__inventory__preset.html", null ]
+        [ "saw_barrel_inventory_preset", "classsaw__barrel__inventory__preset.html", null ],
+        [ "saw_stock_inventory_preset", "classsaw__stock__inventory__preset.html", null ]
       ] ]
     ] ],
     [ "invlet_favorites", "classinvlet__favorites.html", null ],
@@ -966,6 +962,7 @@ var hierarchy =
     [ "anonymous_namespace{armor_layers.cpp}::item_penalties", "structanonymous__namespace_02armor__layers_8cpp_03_1_1item__penalties.html", null ],
     [ "item_pricing", "classitem__pricing.html", null ],
     [ "item_reference", "structitem__reference.html", null ],
+    [ "item_reload_option", "classitem__reload__option.html", null ],
     [ "Item_spawn_data", "classItem__spawn__data.html", [
       [ "Item_group", "classItem__group.html", null ],
       [ "Single_item_creator", "classSingle__item__creator.html", null ]
@@ -975,6 +972,7 @@ var hierarchy =
       [ "vehicle_stack", "classvehicle__stack.html", null ]
     ] ],
     [ "iteminfo", "structiteminfo.html", null ],
+    [ "iteminfo_query", "classiteminfo__query.html", null ],
     [ "game::non_dead_range< T >::iterator", "classgame_1_1non__dead__range_1_1iterator.html", null ],
     [ "rect_range< RectType >::iterator", "classrect__range_1_1iterator.html", null ],
     [ "std::iterator_traits< vehicle_part_iterator< T > >", "structstd_1_1iterator__traits_3_01vehicle__part__iterator_3_01T_01_4_01_4.html", null ],
@@ -1026,6 +1024,7 @@ var hierarchy =
       [ "reveal_map_actor", "classreveal__map__actor.html", null ],
       [ "salvage_actor", "classsalvage__actor.html", null ],
       [ "saw_barrel_actor", "classsaw__barrel__actor.html", null ],
+      [ "saw_stock_actor", "classsaw__stock__actor.html", null ],
       [ "sew_advanced_actor", "classsew__advanced__actor.html", null ],
       [ "unfold_vehicle_iuse", "classunfold__vehicle__iuse.html", null ],
       [ "unpack_actor", "classunpack__actor.html", null ],
@@ -1308,7 +1307,6 @@ var hierarchy =
     [ "npc_template", "classnpc__template.html", null ],
     [ "detail::null< T >", "structdetail_1_1null.html", null ],
     [ "null_deleter", "structnull__deleter.html", null ],
-    [ "cata::nullopt_t", "structcata_1_1nullopt__t.html", null ],
     [ "number_sci_notation", "structnumber__sci__notation.html", null ],
     [ "numeric_interval< T, typename >", "structnumeric__interval.html", null ],
     [ "detail::numeric_specs_checker< ErrorHandler >", "classdetail_1_1numeric__specs__checker.html", null ],
@@ -1329,8 +1327,7 @@ var hierarchy =
     [ "omt_route_params", "structomt__route__params.html", null ],
     [ "pf::omt_score", "structpf_1_1omt__score.html", null ],
     [ "on_out_of_scope", "classon__out__of__scope.html", null ],
-    [ "cata::optional< T >", "classcata_1_1optional.html", null ],
-    [ "cata::optional< vpart_position >", "classcata_1_1optional.html", [
+    [ "std::optional", null, [
       [ "optional_vpart_position", "classoptional__vpart__position.html", null ]
     ] ],
     [ "options_manager", "classoptions__manager.html", null ],
@@ -1422,6 +1419,7 @@ var hierarchy =
     [ "coords::project_to_impl< ScaleUp, 0, ResultScale >", "structcoords_1_1project__to__impl_3_01ScaleUp_00_010_00_01ResultScale_01_4.html", null ],
     [ "projectile", "structprojectile.html", null ],
     [ "projectile_attack_aim", "structprojectile__attack__aim.html", null ],
+    [ "explosion_handler::ExplosionEvent::PropelledEntity", "structexplosion__handler_1_1ExplosionEvent_1_1PropelledEntity.html", null ],
     [ "pry_result", "structpry__result.html", null ],
     [ "quality", "structquality.html", null ],
     [ "quality_requirement", "structquality__requirement.html", null ],
@@ -1460,7 +1458,6 @@ var hierarchy =
     [ "regional_settings", "structregional__settings.html", null ],
     [ "relic", "classrelic.html", null ],
     [ "relic_recharge", "classrelic__recharge.html", null ],
-    [ "item::reload_option", "classitem_1_1reload__option.html", null ],
     [ "RemovePartHandler", "classRemovePartHandler.html", [
       [ "DefaultRemovePartHandler", "classDefaultRemovePartHandler.html", null ],
       [ "MapgenRemovePartHandler", "classMapgenRemovePartHandler.html", null ]
@@ -1638,6 +1635,7 @@ var hierarchy =
     [ "string_id< VehicleGroup >", "classstring__id.html", null ],
     [ "string_id< vitamin >", "classstring__id.html", null ],
     [ "string_id< vpart_info >", "classstring__id.html", null ],
+    [ "string_id< weapon_category >", "classstring__id.html", null ],
     [ "string_id< weather_type >", "classstring__id.html", null ],
     [ "string_id< zone_type >", "classstring__id.html", null ],
     [ "string_id_params< T >", "structstring__id__params.html", null ],
@@ -1695,6 +1693,7 @@ var hierarchy =
     [ "transform_terrain_data", "structtransform__terrain__data.html", null ],
     [ "translatable_mod_info", "structtranslatable__mod__info.html", null ],
     [ "translation", "classtranslation.html", null ],
+    [ "transparency_exp_lookup< n >", "structtransparency__exp__lookup.html", null ],
     [ "cata::transparent_less_than", "structcata_1_1transparent__less__than.html", [
       [ "cata::flat_set< std::string >", "classcata_1_1flat__set.html", null ],
       [ "cata::flat_set< T, Compare, Data >", "classcata_1_1flat__set.html", null ]
@@ -1711,11 +1710,11 @@ var hierarchy =
       [ "detail::is_integral< int128_t >", "structdetail_1_1is__integral_3_01int128__t_01_4.html", null ],
       [ "detail::is_integral< uint128_t >", "structdetail_1_1is__integral_3_01uint128__t_01_4.html", null ],
       [ "detail::is_named_arg< named_arg< Char, T > >", "structdetail_1_1is__named__arg_3_01named__arg_3_01Char_00_01T_01_4_01_4.html", null ],
-      [ "detail::is_optional_helper< cata::optional< T > >", "classdetail_1_1is__optional__helper_3_01cata_1_1optional_3_01T_01_4_01_4.html", null ],
+      [ "detail::is_optional_helper< std::optional< T > >", "classdetail_1_1is__optional__helper_3_01std_1_1optional_3_01T_01_4_01_4.html", null ],
       [ "detail::is_output_iterator< It, T, void_t< typename std::iterator_traits< It >::iterator_category, decltype(*std::declval< It >()=std::declval< T >()) > >", "structdetail_1_1is__output__iterator_3_01It_00_01T_00_01void__t_3_01typename_01std_1_1iterator__c6c92fb2cbbf10ce92436c9976fda4bf.html", null ],
       [ "detail::is_reference_wrapper< std::reference_wrapper< T > >", "structdetail_1_1is__reference__wrapper_3_01std_1_1reference__wrapper_3_01T_01_4_01_4.html", null ],
       [ "has_enum_traits< E, enum_traits_detail::last_type< E > >", "structhas__enum__traits_3_01E_00_01enum__traits__detail_1_1last__type_3_01E_01_4_01_4.html", null ],
-      [ "has_src_member< T, cata::void_t< decltype(std::declval< T & >().src.emplace_back(std::declval< T & >().id, mod_id()))> >", "structhas__src__member_3_01T_00_01cata_1_1void__t_3_01decltype_07std_1_1declval_3_01T_01_6_01_4_4e4a02a40440211e97410229b7faa76f.html", null ],
+      [ "has_src_member< T, std::void_t< decltype(std::declval< T & >().src.emplace_back(std::declval< T & >().id, mod_id()))> >", "structhas__src__member_3_01T_00_01std_1_1void__t_3_01decltype_07std_1_1declval_3_01T_01_6_01_4_008f265368982ec699844890d5cd1ff0d.html", null ],
       [ "io::detail::has_archive_tag< T, typename enable_if_type< typename T::archive_type_tag >::type >", "structio_1_1detail_1_1has__archive__tag_3_01T_00_01typename_01enable__if__type_3_01typename_01T_f020189a2c34814894bce8b62ed27d09.html", null ],
       [ "is_char< char >", "structis__char_3_01char_01_4.html", null ],
       [ "is_char< char16_t >", "structis__char_3_01char16__t_01_4.html", null ],
@@ -1726,8 +1725,8 @@ var hierarchy =
       [ "is_contiguous< std::basic_string< Char > >", "structis__contiguous_3_01std_1_1basic__string_3_01Char_01_4_01_4.html", null ],
       [ "is_pimpl_helper< pimpl< T > >", "classis__pimpl__helper_3_01pimpl_3_01T_01_4_01_4.html", null ],
       [ "is_std_array_helper< std::array< T, N > >", "classis__std__array__helper_3_01std_1_1array_3_01T_00_01N_01_4_01_4.html", null ],
-      [ "supports_proportional< T, cata::void_t< decltype(std::declval< T & >() *=std::declval< float >())> >", "structsupports__proportional_3_01T_00_01cata_1_1void__t_3_01decltype_07std_1_1declval_3_01T_01_65a900226014ad1185c6b766ea4e24245.html", null ],
-      [ "supports_relative< T, cata::void_t< decltype(std::declval< T & >()+=std::declval< T & >())> >", "structsupports__relative_3_01T_00_01cata_1_1void__t_3_01decltype_07std_1_1declval_3_01T_01_6_01_50ce8d93c8242fc4603fa58eb9774b45.html", null ]
+      [ "supports_proportional< T, std::void_t< decltype(std::declval< T & >() *=std::declval< float >())> >", "structsupports__proportional_3_01T_00_01std_1_1void__t_3_01decltype_07std_1_1declval_3_01T_01_6_feffb41c6ab1ef1da38e3c6e8b927d83.html", null ],
+      [ "supports_relative< T, std::void_t< decltype(std::declval< T & >()+=std::declval< T & >())> >", "structsupports__relative_3_01T_00_01std_1_1void__t_3_01decltype_07std_1_1declval_3_01T_01_6_01_49ed6ff7dcf760d5705b050c877ee4fe5.html", null ]
     ] ],
     [ "detail::truncating_iterator< OutputIt, Enable >", "classdetail_1_1truncating__iterator.html", null ],
     [ "detail::truncating_iterator_base< OutputIt >", "classdetail_1_1truncating__iterator__base.html", [
@@ -1756,6 +1755,7 @@ var hierarchy =
       [ "overmap_ui::map_notes_callback", "classovermap__ui_1_1map__notes__callback.html", null ],
       [ "pointmenu_cb", "classpointmenu__cb.html", null ],
       [ "query_destination_callback", "classquery__destination__callback.html", null ],
+      [ "sound_on_move_uilist_callback", "classsound__on__move__uilist__callback.html", null ],
       [ "spellbook_callback", "classspellbook__callback.html", null ],
       [ "spellcasting_callback", "classspellcasting__callback.html", null ],
       [ "teleporter_callback", "classteleporter__callback.html", null ],
@@ -1861,6 +1861,7 @@ var hierarchy =
     [ "washing_requirements", "structwashing__requirements.html", null ],
     [ "watcher_set< Watcher >", "classwatcher__set.html", null ],
     [ "Creature_tracker::weak_ptr_comparator", "classCreature__tracker_1_1weak__ptr__comparator.html", null ],
+    [ "weapon_category", "classweapon__category.html", null ],
     [ "weather_animation_t", "structweather__animation__t.html", null ],
     [ "weather_gen_common", "structweather__gen__common.html", null ],
     [ "weather_generator", "classweather__generator.html", null ],
@@ -1879,6 +1880,7 @@ var hierarchy =
     [ "weighted_object< W, T >", "structweighted__object.html", null ],
     [ "detail::width_adapter< SpecHandler, Char >", "structdetail_1_1width__adapter.html", null ],
     [ "detail::width_checker< ErrorHandler >", "classdetail_1_1width__checker.html", null ],
+    [ "wield_status", "classwield__status.html", null ],
     [ "catacurses::window", "classcatacurses_1_1window.html", null ],
     [ "window_panel", "classwindow__panel.html", null ],
     [ "wisheffect_state", "structwisheffect__state.html", null ],
