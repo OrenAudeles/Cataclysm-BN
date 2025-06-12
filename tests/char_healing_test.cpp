@@ -1,6 +1,7 @@
 #include "catch/catch.hpp"
 
 #include <string>
+#include <units_health.h>
 
 #include "avatar.h"
 #include "bodypart.h"
@@ -52,7 +53,7 @@ static void give_one_trait( player &dummy, const std::string trait_name )
 static float healing_rate_at_health( Character &dummy, const int healthy_value,
                                      const float rest_quality )
 {
-    dummy.set_healthy( healthy_value );
+    dummy.set_healthy( units::from_unit_health( healthy_value ) );
     return dummy.healing_rate( rest_quality );
 }
 
@@ -69,7 +70,7 @@ TEST_CASE( "baseline healing rate with no healing traits", "[heal][baseline][!ma
     REQUIRE( normal > 1.0f * hp_per_day );
 
     // Ensure baseline hidden health stat
-    REQUIRE( dummy.get_healthy() == 0 );
+    REQUIRE( dummy.get_healthy() == units::health_zero );
 
     GIVEN( "character with no healing traits" ) {
         dummy.clear_mutations();
@@ -103,7 +104,7 @@ TEST_CASE( "traits and mutations affecting healing rate", "[heal][trait][mutatio
     REQUIRE( normal > 1.0f * hp_per_day );
 
     // Ensure baseline hidden health stat
-    REQUIRE( dummy.get_healthy() == 0 );
+    REQUIRE( dummy.get_healthy() == units::health_zero );
 
     // "Your flesh regenerates from wounds incredibly quickly."
     SECTION( "Regeneration" ) {
