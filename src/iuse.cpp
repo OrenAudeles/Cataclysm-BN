@@ -740,7 +740,7 @@ int iuse::vaccine( player *p, item *it, bool, const tripoint & )
 {
     p->add_msg_if_player( _( "You inject the vaccine." ) );
     p->add_msg_if_player( m_good, _( "You feel tough." ) );
-    p->mod_healthy_mod( 200, 200 );
+    p->mod_healthy_mod( units::health_max, units::health_max );
     p->mod_pain( 3 );
     p->i_add( item::spawn( "syringe", it->birthday() ) );
     return it->type->charges_to_use();
@@ -921,8 +921,8 @@ int iuse::blech( player *p, item *it, bool, const tripoint & )
         double multiplier = -1;
         p->mod_stored_kcal( 10 * p->nutrition_for( *it ) * multiplier );
         p->mod_thirst( -it->get_comestible()->quench * multiplier + 20 );
-        p->mod_healthy_mod( it->get_comestible()->healthy * multiplier,
-                            it->get_comestible()->healthy * multiplier );
+        p->mod_healthy_mod( units::from_unit_health( it->get_comestible()->healthy * multiplier ),
+                            units::from_unit_health( it->get_comestible()->healthy * multiplier ) );
         p->add_morale( MORALE_FOOD_BAD, it->get_comestible_fun() * multiplier, 60, 1_hours, 30_minutes,
                        false, it->type );
     } else {
@@ -965,8 +965,8 @@ int iuse::plantblech( player *p, item *it, bool, const tripoint &pos )
         //reverses the harmful values of drinking fertilizer
         p->mod_stored_kcal( -10 * p->nutrition_for( *it ) * multiplier );
         p->mod_thirst( -it->get_comestible()->quench * multiplier );
-        p->mod_healthy_mod( it->get_comestible()->healthy * multiplier,
-                            it->get_comestible()->healthy * multiplier );
+        p->mod_healthy_mod( units::from_unit_health( it->get_comestible()->healthy * multiplier ),
+                            units::from_unit_health( it->get_comestible()->healthy * multiplier ) );
         p->add_morale( MORALE_FOOD_GOOD, -10 * multiplier, 60, 1_hours, 30_minutes, false, it->type );
         return it->type->charges_to_use();
     } else {
@@ -1382,7 +1382,7 @@ int iuse::mycus( player *p, item *it, bool t, const tripoint &pos )
         p->mod_thirst( 10 );
         p->mod_fatigue( 5 );
         p->vomit(); // no hunger/quench benefit for you
-        p->mod_healthy_mod( -8, -50 );
+        p->mod_healthy_mod( units::from_unit_health( -8 ), units::from_unit_health( -50 ) );
     }
     return it->type->charges_to_use();
 }
@@ -5172,7 +5172,7 @@ int iuse::adrenaline_injector( player *p, item *it, bool, const tripoint & )
     if( p->has_effect( effect_adrenaline ) ) {
         p->add_msg_if_player( m_bad, _( "Your heart spasms!" ) );
         // Note: not the mod, the health
-        p->mod_healthy( -20 );
+        p->mod_healthy( units::from_unit_health( -20 ) );
     }
 
     p->add_effect( effect_adrenaline, 2_minutes );

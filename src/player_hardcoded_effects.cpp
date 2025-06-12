@@ -123,7 +123,7 @@ static void eff_fun_spores( player &u, effect &it )
     // Equivalent to X in 150000 + health * 100
     const int intense = it.get_intensity();
     if( ( !u.has_trait( trait_M_IMMUNE ) ) && ( one_in( 100 ) &&
-            x_in_y( intense, 900 + u.get_healthy() * 0.6 ) ) ) {
+            x_in_y( intense, 900 + units::to_unit_health( u.get_healthy() * 0.6 ) ) ) ) {
         u.add_effect( effect_fungus, 1_turns, bodypart_str_id::NULL_ID() );
     }
 }
@@ -131,7 +131,8 @@ static void eff_fun_fungus( player &u, effect &it )
 {
     const time_duration dur = it.get_duration();
     const int intense = it.get_intensity();
-    const int bonus = u.get_healthy() / 10 + ( u.resists_effect( it ) ? 100 : 0 );
+    const int bonus = units::to_unit_health( u.get_healthy() / 10 ) + ( u.resists_effect(
+                          it ) ? 100 : 0 );
     switch( intense ) {
         case 1:
             // First hour symptoms
@@ -817,7 +818,7 @@ void Character::hardcoded_effects( effect &it )
             add_msg_if_player( m_bad, _( "Your head aches faintly." ) );
         }
         if( one_in( 6144 ) ) {
-            mod_healthy_mod( -10, -100 );
+            mod_healthy_mod( units::from_unit_health( -10 ), units::from_unit_health( -100 ) );
             apply_damage( nullptr, bodypart_id( "head" ), rng( 0, 1 ) );
             if( !has_effect( effect_visuals ) ) {
                 add_msg_if_player( m_bad, _( "Your vision is getting fuzzy." ) );
@@ -825,7 +826,7 @@ void Character::hardcoded_effects( effect &it )
             }
         }
         if( one_in( 24576 ) ) {
-            mod_healthy_mod( -10, -100 );
+            mod_healthy_mod( units::from_unit_health( -10 ), units::from_unit_health( -100 ) );
             apply_damage( nullptr, bodypart_id( "head" ), rng( 1, 2 ) );
             if( !is_blind() && !sleeping ) {
                 add_msg_if_player( m_bad, _( "Your vision goes black!" ) );
@@ -969,7 +970,7 @@ void Character::hardcoded_effects( effect &it )
             } else if( has_effect( effect_weak_antibiotic ) ) {
                 recover_factor += 100;
             }
-            recover_factor += get_healthy() / 10;
+            recover_factor += units::to_unit_health( get_healthy() / 10 );
 
             if( x_in_y( recover_factor, 648000 ) ) {
                 //~ %s is bodypart name.
@@ -1022,7 +1023,7 @@ void Character::hardcoded_effects( effect &it )
             } else if( has_effect( effect_weak_antibiotic ) ) {
                 recover_factor += 100;
             }
-            recover_factor += get_healthy() / 10;
+            recover_factor += units::to_unit_health( get_healthy() / 10 );
 
             if( x_in_y( recover_factor, 5184000 ) ) {
                 //~ %s is bodypart name.

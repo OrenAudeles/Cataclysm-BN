@@ -975,8 +975,8 @@ void Character::modify_health( const islot_comestible &comest )
 {
     const int effective_health = comest.healthy;
     // Effectively no cap on health modifiers from food and meds
-    const int health_cap = 200;
-    mod_healthy_mod( effective_health, effective_health >= 0 ? health_cap : -health_cap );
+    mod_healthy_mod( units::from_unit_health( effective_health ),
+                     effective_health >= 0 ? units::health_max : units::health_min );
 }
 
 void Character::modify_stimulation( const islot_comestible &comest )
@@ -1195,7 +1195,7 @@ bool Character::consume_effects( item &food )
         // ~-1 health per 1 nutrition at halfway-rotten-away, ~0 at "just got rotten"
         // But always round down
         int h_loss = -rottedness * comest.get_default_nutr();
-        mod_healthy_mod( h_loss, -200 );
+        mod_healthy_mod( units::from_unit_health( h_loss ), units::health_min );
         add_msg( m_debug, "%d health from %0.2f%% rotten food", h_loss, rottedness );
     }
 

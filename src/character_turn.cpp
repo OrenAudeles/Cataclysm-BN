@@ -31,6 +31,7 @@
 #include "weather_gen.h"
 #include "weather.h"
 #include "profile.h"
+#include <units_health.h>
 
 static const trait_id trait_ACIDBLOOD( "ACIDBLOOD" );
 static const trait_id trait_ARACHNID_ARMS_OK( "ARACHNID_ARMS_OK" );
@@ -359,9 +360,13 @@ void Character::process_one_effect( effect &it, bool is_new )
     if( val != 0 ) {
         mod = 1;
         if( is_new || it.activated( calendar::turn, "H_MOD", val, reduced, mod ) ) {
-            int bounded = bound_mod_to_vals(
-                              get_healthy_mod(), val, it.get_max_val( "H_MOD", reduced ),
-                              it.get_min_val( "H_MOD", reduced ) );
+            val = units::to_raw_health( units::from_unit_health( val ) );
+            int min_val = units::to_raw_health( units::from_unit_health( it.get_min_val( "H_MOD", reduced ) ) );
+            int max_val = units::to_raw_health( units::from_unit_health( it.get_max_val( "H_MOD", reduced ) ) );
+
+            units::health bounded = units::from_raw_health( bound_mod_to_vals( units::to_raw_health(
+                                        get_healthy_mod() ), val, max_val, min_val ) );
+
             // This already applies bounds, so we pass them through.
             mod_healthy_mod( bounded, get_healthy_mod() + bounded );
         }
@@ -372,8 +377,16 @@ void Character::process_one_effect( effect &it, bool is_new )
     if( val != 0 ) {
         mod = 1;
         if( is_new || it.activated( calendar::turn, "HEALTH", val, reduced, mod ) ) {
-            mod_healthy( bound_mod_to_vals( get_healthy(), val,
-                                            it.get_max_val( "HEALTH", reduced ), it.get_min_val( "HEALTH", reduced ) ) );
+            val = units::to_raw_health( units::from_unit_health( val ) );
+            int min_val = units::to_raw_health( units::from_unit_health( it.get_min_val( "HEALTH",
+                                                reduced ) ) );
+            int max_val = units::to_raw_health( units::from_unit_health( it.get_max_val( "HEALTH",
+                                                reduced ) ) );
+
+            units::health bounded = units::from_raw_health( bound_mod_to_vals( units::to_raw_health(
+                                        get_healthy() ), val, max_val, min_val ) );
+
+            mod_healthy( bounded );
         }
     }
 
@@ -822,8 +835,8 @@ void Character::environmental_revert_effect()
     set_stored_kcal( max_stored_kcal() );
     set_thirst( 0 );
     set_fatigue( 0 );
-    set_healthy( 0 );
-    set_healthy_mod( 0 );
+    set_healthy( units::health_zero );
+    set_healthy_mod( units::health_zero );
     set_stim( 0 );
     set_pain( 0 );
     set_painkiller( 0 );

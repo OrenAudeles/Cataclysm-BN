@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <map>
+#include <units_health.h>
 #include <utility>
 
 #include "calendar.h"
@@ -101,7 +102,7 @@ void addict_effect( Character &u, addiction &add )
             u.mod_per_bonus( -1 );
             u.mod_int_bonus( -1 );
             if( x_in_y( in, to_turns<int>( 2_hours ) ) ) {
-                u.mod_healthy_mod( -1, -in * 10 );
+                u.mod_healthy_mod( units::from_unit_health( -1 ), units::from_unit_health( -in * 10 ) );
             }
             if( x_in_y( in, to_turns<int>( 2_minutes ) * 20 ) ) {
                 const std::string msg_1 = add.type == add_type::ALCOHOL ?
@@ -147,7 +148,7 @@ void addict_effect( Character &u, addiction &add )
                 u.mod_pain( 1 );
             }
             if( one_in( 1200 - 30 * in ) ) {
-                u.mod_healthy_mod( -1, -in * 30 );
+                u.mod_healthy_mod( units::from_unit_health( -1 ), units::from_unit_health( -in * 30 ) );
             }
             if( one_in( 20 ) && dice( 2, 20 ) < in ) {
                 u.add_msg_if_player( m_bad, _( "Your hands start shaking… you need some painkillers." ) );
@@ -171,7 +172,7 @@ void addict_effect( Character &u, addiction &add )
                 u.mod_stim( -1 );
             }
             if( rng( 0, 150 ) <= in ) {
-                u.mod_healthy_mod( -1, -in );
+                u.mod_healthy_mod( units::from_unit_health( -1 ), units::from_unit_health( -in ) );
             }
             if( dice( 2, 100 ) < in ) {
                 u.add_msg_if_player( m_warning, _( "You feel depressed.  Speed would help." ) );

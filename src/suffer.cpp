@@ -754,7 +754,7 @@ void Character::suffer_feral_kill_withdrawl()
             default:
             case 1:
                 // Feel ill, overcome with nausea if awake.  Additional chance of unexplained bleeding.
-                mod_healthy_mod( -50, -500 );
+                mod_healthy_mod( units::from_unit_health( -50 ), units::from_unit_health( -500 ) );
                 if( !in_sleep_state() ) {
                     add_msg_if_player( m_bad, _( "You feel as if your insides are rotting away." ) );
                     vomit();
@@ -1079,7 +1079,7 @@ void Character::suffer_from_other_mutations()
     if( x_in_y( root_vitamins, 576 ) ) {
         vitamin_mod( vitamin_id( "iron" ), 1, true );
         vitamin_mod( vitamin_id( "calcium" ), 1, true );
-        mod_healthy_mod( 5, 50 );
+        mod_healthy_mod( units::from_unit_health( 5 ), units::from_unit_health( 50 ) );
     }
 
     if( x_in_y( root_water, 2550 ) ) {
@@ -1247,9 +1247,9 @@ void Character::suffer_from_radiation()
 
     if( !radiogenic && get_rad() > 0 ) {
         // Even if you heal the radiation itself, the damage is done.
-        const int hmod = get_healthy_mod();
-        if( hmod > 200 - get_rad() ) {
-            set_healthy_mod( std::max( -200, 200 - get_rad() ) );
+        const units::health hmod = get_healthy_mod();
+        if( hmod > units::from_unit_health( 200 - get_rad() ) ) {
+            set_healthy_mod( units::from_unit_health( std::max( -200, 200 - get_rad() ) ) );
         }
     }
 
@@ -1378,7 +1378,7 @@ void Character::suffer_from_bad_bionics()
         sfx::play_variant_sound( "bionics", "elec_crackle_med", 100 );
     }
     if( has_bionic( bio_leaky ) && one_turn_in( 6_minutes ) ) {
-        mod_healthy_mod( -1, -200 );
+        mod_healthy_mod( units::from_unit_health( -1 ), units::from_unit_health( -200 ) );
     }
     if( has_bionic( bio_sleepy ) && one_turn_in( 50_minutes ) && !in_sleep_state() ) {
         mod_fatigue( 1 );
