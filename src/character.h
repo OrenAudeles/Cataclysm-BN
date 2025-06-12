@@ -13,6 +13,7 @@
 #include <optional>
 #include <set>
 #include <string>
+#include <units_health.h>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -366,16 +367,16 @@ class Character : public Creature, public location_visitable<Character>
         void print_health() const;
 
         /** Getters for health values exclusive to characters */
-        virtual int get_healthy() const;
-        virtual int get_healthy_mod() const;
+        virtual units::health get_healthy() const;
+        virtual units::health get_healthy_mod() const;
 
         /** Modifiers for health values exclusive to characters */
-        virtual void mod_healthy( int nhealthy );
-        virtual void mod_healthy_mod( int nhealthy_mod, int cap );
+        virtual void mod_healthy( units::health nhealthy );
+        virtual void mod_healthy_mod( units::health nhealthy_mod, units::health cap );
 
         /** Setters for health values exclusive to characters */
-        virtual void set_healthy( int nhealthy );
-        virtual void set_healthy_mod( int nhealthy_mod );
+        virtual void set_healthy( units::health nhealthy );
+        virtual void set_healthy_mod( units::health nhealthy_mod );
 
         /** Getter for need values exclusive to characters */
         int get_stored_kcal() const;
@@ -1809,7 +1810,7 @@ class Character : public Creature, public location_visitable<Character>
         // Your mass + "kg/lbs"
         std::string get_weight_string() const;
         // gets the max value healthy you can be
-        int get_max_healthy() const;
+        units::health get_max_healthy() const;
         // calculates the BMI
         float bmi() const;
         // returns amount of calories burned in a day given various metabolic factors
@@ -2258,8 +2259,10 @@ class Character : public Creature, public location_visitable<Character>
         int int_bonus = 0;
 
         /** How healthy the character is. */
-        int healthy = 0;
-        int healthy_mod = 0;
+        units::health healthy;
+        units::health healthy_mod;
+        // int healthy = 0;
+        // int healthy_mod = 0;
 
         /** age in years at character creation */
         int init_age = 25;

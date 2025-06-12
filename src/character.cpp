@@ -12,6 +12,7 @@
 #include <ostream>
 #include <ranges>
 #include <type_traits>
+#include <units_health.h>
 
 #include "action.h"
 #include "activity_actor_definitions.h"
@@ -431,8 +432,8 @@ Character::Character() :
     dex_bonus = 0;
     per_bonus = 0;
     int_bonus = 0;
-    healthy = 0;
-    healthy_mod = 0;
+    healthy = {};
+    healthy_mod = {};
     thirst = 0;
     fatigue = 0;
     sleep_deprivation = 0;
@@ -752,7 +753,7 @@ void Character::mod_stat( const std::string &stat, float modifier )
     } else if( stat == "int" ) {
         mod_int_bonus( modifier );
     } else if( stat == "healthy" ) {
-        mod_healthy( modifier );
+        mod_healthy( units::from_unit_health( modifier ) );
     } else if( stat == "kcal" ) {
         mod_stored_kcal( modifier );
     } else if( stat == "hunger" ) {
@@ -1837,7 +1838,7 @@ bool Character::movement_mode_is( const character_movemode mode ) const
 void Character::expose_to_disease( const diseasetype_id dis_type )
 {
     const std::optional<int> &healt_thresh = dis_type->health_threshold;
-    if( healt_thresh && healt_thresh.value() < get_healthy() ) {
+    if( healt_thresh && units::from_unit_health( healt_thresh.value() ) < get_healthy() ) {
         return;
     }
     const std::set<body_part> &bps = dis_type->affected_bodyparts;
@@ -4639,11 +4640,11 @@ int Character::ranged_per_mod() const
     return std::max( ( 20.0 - get_per() ) * 1.2, 0.0 );
 }
 
-int Character::get_healthy() const
+units::health Character::get_healthy() const
 {
     return healthy;
 }
-int Character::get_healthy_mod() const
+units::health Character::get_healthy_mod() const
 {
     return healthy_mod;
 }
@@ -4698,7 +4699,7 @@ void Character::print_health() const
     if( !is_player() ) {
         return;
     }
-    int current_health = get_healthy();
+    int current_health = units::to_unit_health( get_healthy() );
     if( has_trait( trait_SELFAWARE ) ) {
         add_msg_if_player( _( "Your current health value is %d." ), current_health );
     }
@@ -4740,11 +4741,11 @@ std::string enum_to_string<character_stat>( character_stat data )
 }
 } // namespace io
 
-void Character::set_healthy( int nhealthy )
+void Character::set_healthy( units::health nhealthy )
 {
     healthy = nhealthy;
 }
-void Character::mod_healthy( int nhealthy )
+void Character::mod_healthy( units::health nhealthy )
 {
     float mut_rate = 1.0f;
     for( const trait_id &mut : get_mutations() ) {
@@ -4752,11 +4753,11 @@ void Character::mod_healthy( int nhealthy )
     }
     healthy += nhealthy * mut_rate;
 }
-void Character::set_healthy_mod( int nhealthy_mod )
+void Character::set_healthy_mod( units::health nhealthy_mod )
 {
     healthy_mod = nhealthy_mod;
 }
-void Character::mod_healthy_mod( int nhealthy_mod, int cap )
+void Character::mod_healthy_mod( units::health nhealthy_mod, units::health cap )
 {
     // TODO: This really should be a full morale-like system, with per-effect caps
     //       and durations.  This version prevents any single effect from exceeding its
@@ -4765,22 +4766,22 @@ void Character::mod_healthy_mod( int nhealthy_mod, int cap )
     // Cap indicates how far the mod is allowed to shift in this direction.
     // It can have a different sign to the mod, e.g. for items that treat
     // extremely low health, but can't make you healthy.
-    if( nhealthy_mod == 0 || cap == 0 ) {
+    if( nhealthy_mod == units::health_zero || cap == units::health_zero ) {
         return;
     }
-    int low_cap;
-    int high_cap;
-    if( nhealthy_mod < 0 ) {
+    units::health low_cap;
+    units::health high_cap;
+    if( nhealthy_mod < units::health_zero ) {
         low_cap = cap;
-        high_cap = 200 * 10000;
+        high_cap = units::health_max;
     } else {
-        low_cap = -200 * 10000;
+        low_cap = units::health_min;
         high_cap = cap;
     }
 
     // If we're already out-of-bounds, we don't need to do anything.
-    if( ( healthy_mod <= low_cap && nhealthy_mod < 0 ) ||
-        ( healthy_mod >= high_cap && nhealthy_mod > 0 ) ) {
+    if( ( healthy_mod <= low_cap && nhealthy_mod < units::health_zero ) ||
+        ( healthy_mod >= high_cap && nhealthy_mod > units::health_zero ) ) {
         return;
     }
 
@@ -5041,9 +5042,9 @@ std::string Character::get_weight_string() const
     return std::to_string( display_weight ) + " " + weight_units();
 }
 
-int Character::get_max_healthy() const
+units::health Character::get_max_healthy() const
 {
-    return 200 * 10000;
+    return units::health_max;
 }
 
 void Character::regen( int rate_multiplier )
@@ -5130,6 +5131,7 @@ void Character::enforce_minimum_healing()
 
 void Character::update_health( int external_modifiers )
 {
+    units::health u_external_modifiers = units::from_unit_health( external_modifiers );
     if( has_artifact_with( AEP_SICK ) ) {
         // Carrying a sickness artifact makes your health 50 points worse on average
         external_modifiers -= 50 * 10000;
@@ -5138,29 +5140,33 @@ void Character::update_health( int external_modifiers )
     // This also sets approximate bounds for the character's health.
     if( get_healthy_mod() > get_max_healthy() ) {
         set_healthy_mod( get_max_healthy() );
-    } else if( get_healthy_mod() < -200 * 10000) {
-        set_healthy_mod( -200 * 10000);
+    } else if( get_healthy_mod() < units::health_min ) {
+        set_healthy_mod( units::health_min );
     }
 
     // Active leukocyte breeder will keep your health near 100
-    int effective_healthy_mod = get_healthy_mod();
+    units::health effective_healthy_mod = get_healthy_mod();
     if( has_active_bionic( bio_leukocyte ) ) {
         // Side effect: dependency
-        mod_healthy_mod( -50 * 10000, -200 * 10000);
-        effective_healthy_mod = 100 * 10000;
+        mod_healthy_mod( units::from_unit_health( -50 ), units::health_min );
+        effective_healthy_mod = units::from_unit_health( 100 );
     }
 
     // Health tends toward healthy_mod.
     // For small differences, it changes 4 points per day
     // For large ones, up to ~40% of the difference per day
-    int health_change = effective_healthy_mod - get_healthy() + external_modifiers;
-    mod_healthy( sgn( health_change ) * std::max<int>( 1, std::abs( health_change ) * (1 - 0.9971) ) );
+    int health_change = units::to_raw_health( effective_healthy_mod - get_healthy() +
+                        u_external_modifiers );
+    mod_healthy( units::from_raw_health( sgn( health_change ) * std::max<int>( 1,
+                                         std::abs( health_change ) * ( 1 - 0.9971 ) ) ) );
 
     // And healthy_mod decays over time.
     // Slowly near 0, but it's hard to overpower it near +/-100
-    set_healthy_mod( std::round( get_healthy_mod() * 0.9955f ) );
+    set_healthy_mod( units::from_raw_health( std::round( units::to_raw_health(
+                         get_healthy_mod() * 0.9955f ) ) ) );
 
-    add_msg( m_debug, "Health: %d, Health mod: %d", get_healthy(), get_healthy_mod() );
+    add_msg( m_debug, "Health: %d, Health mod: %d", units::to_unit_health( get_healthy() ),
+             units::to_unit_health( get_healthy_mod() ) );
 }
 
 // Returns the number of multiples of tick_length we would "pass" on our way `from` to `to`
@@ -5608,7 +5614,7 @@ void Character::check_needs_extremes()
             mod_fatigue( 5 );
 
             if( one_in( 10 ) ) {
-                mod_healthy_mod( -1, 0 );
+                mod_healthy_mod( units::from_unit_health( -1 ), units::health_zero );
             }
         } else if( sleep_deprivation < sleep_deprivation_levels::major ) {
             add_msg_if_player( m_bad,
@@ -5616,14 +5622,14 @@ void Character::check_needs_extremes()
             mod_fatigue( 10 );
 
             if( one_in( 5 ) ) {
-                mod_healthy_mod( -2, -20 );
+                mod_healthy_mod( units::from_unit_health( -2 ), units::from_unit_health( -20 ) );
             }
         } else if( sleep_deprivation < sleep_deprivation_levels::massive ) {
             add_msg_if_player( m_bad,
                                _( "You haven't slept decently for so long that your whole body is screaming for mercy.  It's a miracle that you're still awake, but it just feels like a curse now." ) );
             mod_fatigue( 40 );
 
-            mod_healthy_mod( -5, -50 );
+            mod_healthy_mod( units::from_unit_health( -5 ), units::from_unit_health( -50 ) );
         }
         // else you pass out for 20 hours, guaranteed
 
@@ -7149,7 +7155,7 @@ float Character::healing_rate( float at_rest_quality ) const
         asleep_rate = at_rest_quality * heal_rate * ( 1.0f + mutation_value( "healing_resting" ) );
     }
     if( asleep_rate > 0.0f ) {
-        final_rate += asleep_rate * ( 1.0f + get_healthy() / 200.0f );
+        final_rate += asleep_rate * ( 1.0f + units::to_unit_health( get_healthy() ) / 200.0f );
     }
 
     // Most common case: awake player with no regenerative abilities
@@ -7209,10 +7215,10 @@ float Character::healing_rate_medicine( float at_rest_quality, const bodypart_id
         rate_medicine *= 2;
     }
 
-    if( get_healthy() > 0.0f ) {
-        rate_medicine *= 1.0f + get_healthy() / 200.0f;
+    if( get_healthy() > units::health_zero ) {
+        rate_medicine *= 1.0f + units::to_unit_health( get_healthy() ) / 200.0f;
     } else {
-        rate_medicine *= 1.0f + get_healthy() / 400.0f;
+        rate_medicine *= 1.0f + units::to_unit_health( get_healthy() ) / 400.0f;
     }
     float primary_hp_mod = mutation_value( "hp_modifier" );
     if( primary_hp_mod < 0.0f ) {
@@ -8225,8 +8231,8 @@ void Character::vomit()
     stomach.empty();
     set_thirst( std::max( 0, get_thirst() ) );
     remove_effect( effect_bloated );
-    if( get_healthy_mod() > 0 ) {
-        set_healthy_mod( 0 );
+    if( get_healthy_mod() > units::health_zero ) {
+        set_healthy_mod( units::health_zero );
     }
 
     moves -= 100;
@@ -9413,7 +9419,7 @@ void Character::rooted()
         if( get_thirst() <= thirst_levels::turgid && x_in_y( 75, 425 ) ) {
             mod_thirst( -1 );
         }
-        mod_healthy_mod( 5, 50 );
+        mod_healthy_mod( units::from_unit_health( 5 ), units::from_unit_health( 50 ) );
     }
 }
 
