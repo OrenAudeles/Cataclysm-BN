@@ -15,6 +15,7 @@
 #include "units_money.h"
 #include "units_temperature.h"
 #include "units_probability.h"
+#include "units_health.h"
 
 namespace units
 {
@@ -55,6 +56,11 @@ inline std::ostream &operator<<( std::ostream &o, temperature_in_millidegree_cel
 inline std::ostream &operator<<( std::ostream &o, probability_in_one_in_million_tag )
 {
     return o << "pm";
+}
+
+inline std::ostream &operator<<( std::ostream &o, health_ratio_tag )
+{
+    return o;
 }
 
 template<typename value_type, typename tag_type>
