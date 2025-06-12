@@ -81,6 +81,9 @@ using mass = quantity<std::int64_t, mass_in_milligram_tag>;
 
 class volume_in_milliliter_tag;
 using volume = quantity<int, volume_in_milliliter_tag>;
+
+class health_ratio_tag;
+using health = quantity<int, health_ratio_tag>;
 } // namespace units
 
 
@@ -142,6 +145,7 @@ LUNA_VAL( units::angle, "Angle" );
 LUNA_VAL( units::energy, "Energy" );
 LUNA_VAL( units::mass, "Mass" );
 LUNA_VAL( units::volume, "Volume" );
+LUNA_VAL( units::health, "Health" );
 
 
 // Ids for in-game objects

@@ -30,6 +30,7 @@
 #include "recipe.h"
 #include "skill.h"
 #include "type_id.h"
+#include "units.h"
 
 void cata::detail::reg_creature_family( sol::state &lua )
 {
@@ -374,14 +375,14 @@ void cata::detail::reg_character( sol::state &lua )
         SET_FX_T( mod_per_bonus, void( int ) );
         SET_FX_T( mod_int_bonus, void( int ) );
 
-        SET_FX_T( get_healthy, int() const );
-        SET_FX_T( get_healthy_mod, int() const );
+        SET_FX_T( get_healthy, units::health() const );
+        SET_FX_T( get_healthy_mod, units::health() const );
 
-        SET_FX_T( mod_healthy, void( int ) );
-        SET_FX_T( mod_healthy_mod, void( int, int ) );
+        SET_FX_T( mod_healthy, void( units::health ) );
+        SET_FX_T( mod_healthy_mod, void( units::health, units::health ) );
 
-        SET_FX_T( set_healthy, void( int ) );
-        SET_FX_T( set_healthy_mod, void( int ) );
+        SET_FX_T( set_healthy, void( units::health ) );
+        SET_FX_T( set_healthy_mod, void( units::health ) );
 
         SET_FX_T( get_stored_kcal, int() const );
 

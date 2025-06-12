@@ -42,6 +42,7 @@
 #include "units_energy.h"
 #include "units_mass.h"
 #include "units_volume.h"
+#include <units_health.h>
 
 std::string_view luna::detail::current_comment;
 
@@ -201,6 +202,22 @@ void cata::detail::reg_units( sol::state &lua )
         luna::set_fx( ut, sol::meta_function::equal_to, &units::volume::operator== );
         luna::set_fx( ut, sol::meta_function::less_than, &units::volume::operator< );
         luna::set_fx( ut, sol::meta_function::less_than_or_equal_to, &units::volume::operator<= );
+    }
+    {
+        sol::usertype<units::health> ut =
+            luna::new_usertype<units::health>(
+                lua,
+                luna::no_bases,
+                luna::no_constructor
+            );
+        luna::set_fx( ut, "from_raw_health", &units::from_raw_health<int> );
+        luna::set_fx( ut, "from_unit_health", &units::from_unit_health<int> );
+        luna::set_fx( ut, "to_raw_health", &units::to_raw_health<int> );
+        luna::set_fx( ut, "to_unit_health", &units::to_unit_health<int> );
+
+        luna::set_fx( ut, sol::meta_function::equal_to, &units::health::operator== );
+        luna::set_fx( ut, sol::meta_function::less_than, &units::health::operator< );
+        luna::set_fx( ut, sol::meta_function::less_than_or_equal_to, &units::health::operator<= );
     }
 }
 
